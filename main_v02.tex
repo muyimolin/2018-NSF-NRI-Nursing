@@ -1,0 +1,1157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 11 pt, onecolumn]{article}
+
+\linespread{1.0}
+\usepackage{tgpagella}
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage[dvips]{color}
+
+\usepackage{pslatex}
+% \usepackage{nopageno}
+\usepackage{enumitem}
+\setlist{itemsep=0em, topsep=0em}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+\usepackage{tabularx}
+%\usepackage{hangcaption}
+\usepackage[font=footnotesize]{caption}
+\usepackage[final]{graphicx}
+%\DeclareGraphicsExtensions{.eps,.ps,.PS,.EPS}
+\usepackage{epsfig}
+\usepackage{subfig}
+\usepackage{tikz}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+%\usepackage{xspace}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[letterpaper]{}
+\usepackage{epstopdf}
+\usepackage{authblk}
+\usepackage{lineno}
+\usepackage{todonotes}
+\usepackage{soul}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{pgfgantt}
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage[compact]{titlesec}
+
+
+\usepackage{titling}
+\setlength{\droptitle}{-5em}   % This is your set screw
+\setlength{\belowcaptionskip}{-5pt}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.4\baselineskip}{0.4\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.4\baselineskip}{0.4\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{0.4\baselineskip}{0.4\baselineskip}
+\setlist[itemize]{leftmargin=*}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\setlength{\floatsep}{5pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{5pt plus 2pt minus 2pt}
+
+% for comments
+\newcommand{\zhi}[1]{\textcolor{blue}{ZL: #1}}
+\newcommand{\jie}[1]{\textcolor{green}{JF: #1}}
+\newcommand{\brian}[1]{\textcolor{magenta}{BZ: #1}}
+
+
+
+% \setlist[enumerate]{leftmargin=*}
+
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0\baselineskip}{% space before (vertical)
+  0.3em}%               space after (horizontal)
+
+\titlespacing{\subsection}{%
+  0em}{%              left margin
+  0.15\baselineskip}{% space before (vertical)
+  0.15\baselineskip}%               space after (horizontal)
+
+% figures with text wrapped around
+\usepackage{wrapfig}
+\usepackage{titling}
+\setlength{\droptitle}{-5em}   % This is your set screw
+\setlength{\textfloatsep}{0.8\baselineskip plus 0.2\baselineskip minus 0.5\baselineskip}
+
+\newcommand{\fig}[1]{Fig.~\ref{#1}}
+\newcommand{\figs}[2]{Fig.~\ref{#1} to~\ref{#2}\xspace}
+\newcommand{\figa}[2]{Fig.~\ref{#1} and~\ref{#2}\xspace}
+\newcommand{\eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\eqs}[2]{Equations~(\ref{#1}) to~(\ref{#2})}
+\newcommand{\eqa}[2]{Equations~(\ref{#1}) and~(\ref{#2})}
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\pagestyle{plain}                                                      %%
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+\renewcommand{\refname}{References Cited}                              %%
+\bibliographystyle{plain}
+
+
+
+\begin{document}
+
+
+\setcounter{page}{1}
+\input{Summary.tex}
+\pagebreak
+
+% \maketitle
+
+\begin{center}
+	{\large \bf NRI: FND: COLLAB: Intelligent Mediating Robot --- Lifelong Learning and Fast Intent Forecasting in Simultaneous Multi-lateral Physical Human-robot Interaction}\\
+    \vspace{4pt}
+% 	\renewcommand{\baselinestretch}{1}
+   	PI: Zhi Li (Worcester Polytechnic Institute)\\
+    Co-PI: Brian Ziebart (University of Illinois at Chicago), Jie Fu (Worcester Polytechnic Institute)
+\end{center}
+
+\vspace{-4pt}
+
+% \hrule
+
+% \thispagestyle{empty}
+% \pagestyle{empty}
+
+
+\pagestyle{plain}
+\setcounter{page}{1}
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{abstract}
+
+% \noindent
+
+% \end{abstract}
+
+%-------------------------------------------------------------------------
+\section{Research Motivations and Objectives}\label{sec:intro}
+%-------------------------------------------------------------------------
+
+% \begin{wrapfigure}{r}{3.0in}
+% \centering
+% % \vspace{-1em}
+% \vspace{-1mm}
+%   \mbox{
+%   \includegraphics[width=0.48\linewidth]{fig//TRINARobot}
+%   \includegraphics[width=0.48\linewidth]{fig//Operator}
+%   }
+% \caption{A tele-nursing robot that mediates between experienced teleoperator and end users (patients and nurse on-site) can develop its motion intelligence through learning from simultaneous multi-lateral physical human robot interaction, in order to provide adaptive assistance to novice teleoperator.}
+% \label{MediatingRobot}
+% \end{wrapfigure}
+\paragraph*{Research Motivations:} 
+Tele-medical robots enable collaborations between remote and on-site medical personnel, and robot-mediated interactions with patients [ref]. These teleoperated robots often provide for greater safety, dexterity and effectiveness than existing autonomous robots, particularly in risk-sensitive tasks that require fine motor skills and contextual decision-making [ref]. 
+However, providing expert teleoperation is a difficult task requiring attentiveness and large amounts of training.
+In this project, we seek to reduce these challenges by providing user-adaptive assistance to novice teleoperators.
+We propose to accomplish this by acquiring contextual motion intelligence from the robot-mediated collaborations/interactions between an expert teleoperator controlling a tele-nursing robot and on-site nurses/patients.
+%For a tele-nursing robot that mediates between human teleoperators and end users, it is efficient to acquire contextual motion intelligence through learning from the robot-mediated collaborations/interactions between an expert teleoperator and on-site nurses/patients, to provide user-adaptive assistance to novice teleoperators. 
+Based on this idea, we propose a novel framework for \textbf{lifelong learning and fast adaptation for multi-lateral physical human robot interactions} (pHRI) that (1) integrates off-line and on-line learning of low-level motion skills and high-level task knowledge from demonstrations, and (2) uses this task knowledge to reason about the human partner's desired subtask allocation as well as the intentions of teleoperators and end users to support appropriate task assistance or sub-task autonomy. Our research aims to improve the dexterity, customizability and usability of mobile humanoid nursing robots in performing complex collaborative tasks, and reduce the learning curve for novice users. The developed methods will more broadly benefit tele-robotic systems that operate in human environments for medical, industrial and social applications. 
+
+% Such motion intelligence can be acquired as high-level models for task representation and decomposition as well low-level level 
+
+
+
+% , with remote human partners in multi-lateral human-robot navigation and manipulation tasks---
+% Teleoperation of this kind offers the potential to train models of desired  navigation and manipulation in these tasks that can %can be leveraged to 
+% provide: %in a variety of ways to improve human-robot interactions. 
+% (1) %develop the contextual motion intelligence of a mediating robot and (2) provide 
+% user-adaptive assistance to novice teleoperators, reducing their effort for dexterous motion coordination; and
+% (2) %enable 
+% teleoperator-supervised robotic autonomy of some subtasks. 
+% %Engaged in multi-lateral human-robot interactions, such robots are in an advantageous position to learn from the robot-mediated collaboration between its teleoperator and end user. 
+% Our research %effort is %initially
+% %motivated by the need 
+% aims specifically to improve the dexterity and usability of mobile humanoid nursing robots in collaboration with human nurses and patients (see~\fig{Tasks}). 
+% The developed methods will more broadly benefit tele-action robotic systems involving physical interaction with human partners that demand human-in-the-loop control due to task complexity, uncertainty and safety concerns.
+%and perform tasks involving both navigation and manipulation in human environments and in intimate physical interaction with human partners.  
+
+% \begin{figure}[h!!]
+% \centering
+% \vspace{-1em}
+%   \mbox{
+%   \includegraphics[width=0.16\linewidth]{fig//Task06}
+%   \includegraphics[width=0.16\linewidth]{fig//Task16}
+%   \includegraphics[width=0.16\linewidth]{fig//Task24}
+%   \includegraphics[width=0.16\linewidth]{fig//Task25}
+%   \includegraphics[width=0.16\linewidth]{fig//Task08}
+%   \includegraphics[width=0.16\linewidth]{fig//Task26}
+%   }
+% \caption{ A teleoperated nursing robot can develop its motion intelligence through learning from robot-mediated collaborations/interactions between (a) experienced teleoperator and end users (patients and nurses on-site). Our project focuses on collaborative and interactive and nursing tasks, such as (b) moving a patient transfer bed, (c.1-c.2) organizing and cleaning patient room, and (d.1-d.4) preparing and serving food to a patient.}
+% \label{Tasks}
+% \end{figure}
+
+\begin{figure}[h!!]
+\centering
+% \vspace{-1em}
+\includegraphics[width=0.99\linewidth]{fig//DemoTasks}
+\caption{ A teleoperated nursing robot can develop its motion intelligence through learning from robot-mediated collaborations/interactions between (a) experienced teleoperator and end users (patients and nurses on-site). The nursing tasks we focuses include: (b) moving a patient transfer bed, (c.1-c.2) organizing and cleaning patient room, which can be performed more efficiently through the collaboration teleoperated nursing robot and on-site human nurses, as well as (d.1-d.4) preparing and serving food to a patient, which involves inter-dependent task steps and intimate human-robot interactions. }
+\label{Tasks}
+\end{figure}
+
+\paragraph*{Motivating Nursing Tasks:} This project focuses on frequently performed nursing tasks that involve \textit{robot-mediated collaborations} between a teleoperator and a on-site nurse, such as moving a patient transfer bed in a cluttered patient room (\fig{Tasks}(b)), organizing medical supplies (\fig{Tasks}(c.1)) and cleaning patient room debris (\fig{Tasks}(c.1)), as well as  \textit{robot-mediated interactions} between a teleoperator and a patient, such as food preparation and serving. Under direct teleoperation, these tasks are feasible to a mobile humanoid nursing robot, yet the task completion time is about 95x times slower than direct human performance~\cite{Hauser_Li_TRINA:17}. Despite the existence of bilateral telepresence, it is still difficult for teleoperators to communicate complex motion intents, which are essential for intimate collaboration. When telepresence communication is frequent, attention to maintaining video/audio communication channels may distract and slow down the teleoperators' control of the robot, adding to the their perception burden~\cite{Hauser_Li_BiTelepresence:17}. So far, no data is available for the feasibility and performance of these tasks under fully autonomous or supervisory control. However, existing research in the field of robot motion planning, robot learning and human-robot interactions, have revealed that the challenges in this tasks are many and significant. 
+
+\paragraph*{Challenges}: This research aims to address three main challenges. \underline{\textbf{\textit{For the mediating robot}}}, {\it neither direct teleoperation nor fully-autonomous control are ideal options}; direct teleoperation often lacks precision for fine-grained control enabled by combining on-site sensing information ~\cite{chen2007human,chen2011supervisory}, while pure autonomy often cannot appropriately interpret highly collaborative and interactive tasks with human partners~\cite{beer2014toward,nahavandi2017trusted,alaieri2016ethical}. \underline{\textbf{\textit{For end users}}}, such as patients and on-site human nurses, {\it physical interactions and collaborations are difficult because robot autonomy may not appear natural and fluent}~\cite{goetz2003matching,strabala2013towards, mitsunaga2008adapting}. This unexpected robot behavior may confuse, surprise or even intimidate end users, adding to patient stress, discomfort and/or anxiety~\cite{nomura2008prediction}. \underline{\textbf{\textit{For the teleoperator}}}, controlling a mobile humanoid robot to perform dexterous coordinated motions involves a {\it significant learning curve for novice users to adapt to the low transparency of the teleoperation system and physical capabilities of the robot}~\cite{rosen2002task,ballantyne2002robotic,novick2003analysis,sudan2012multifactorial,sng2013multiphasic}. This prevents nurses, who have significant first-hand experience and task knowledge, from effectively teleoperating a different physical embodiment.
+In addition, perceiving the remote environment to control position and orientation precisely is difficult despite having many available static and dynamic camera views. The teleoperators' high-level task knowledge of task goals, procedures, and object affordances are still valid, but the low-level motion primitives and their coordination,  as well as the motion-perception mapping have to be relearned through the significant practice. 
+
+
+% coordinated and dexterous manipulations [ref], navigation in cluttered human environments [ref], fluent and natural-looking human-robot collaborations [ref] and interactions [ref], intent inference in human-robot interactions [ref] have revealed that the challenges in this tasks are not trivial. 
+
+
+% \textit{robot-patient interactions}, such as preparing and serving food, taking vital sign measurements from patients and adjusting patients' bodies, as well as (2) \textit{robot-nurse collaboration} in which the robot assists a human nurse to clean a patient's room, collect and organize medical supplies, and move portable medical devices (e.g., patient transfer bed). Shown in~\fig{Tasks}, Tasks (a)-(c) involve delicate and intimate interactions with a patient, while the nursing robot collaborates closely with an on-site nurse in Tasks (d)-(f). We expect these demonstration tasks can best evaluate the contextual motor skills learned, and demonstrate the system's capability of inferring shared user intentions when assist novice teleoperators.
+
+% \paragraph*{Challenges}: This research aims to address three main challenges %unique  %% BDZ: probably general to other human-in-the-loop settings
+% for robot-mediated collaborative nursing tasks. 
+% \underline{\textbf{\textit{For the mediating robot}}}, {\it neither direct teleoperation nor fully-autonomous control are good options}; direct teleoperation often lacks precision for fine-grained control enabled by combining on-site sensing information ~\cite{chen2007human,chen2011supervisory}, while pure autonomy often cannot appropriately interpret highly collaborative and interactive tasks with human partners~\cite{beer2014toward,nahavandi2017trusted,alaieri2016ethical}.
+% %We propose to overcome these limitations by leveraging the benefits of {\bf human teleoperation primarily at higher-levels of task abstraction} and the benefits of {\bf autonomous control primarily at lower-levels of task abstraction}.
+% %, the mediating robot could not utilize on-site sensing information to perform precise low-level control, but have to execute the trajectories commanded by the teleopertor the based on their inaccurate or even distorted perception through camera views. On the other hand, it is also beyond the robot's capability to autonomously handle highly collaborative and interactive tasks.  
+% %To participate as a competent partner, an autonomous robot needs to understand its dynamic and contextual task-sharing and decide when and how to help. It also needs understand the role it can play based the intention and preference of the human partner.   
+% \underline{\textbf{\textit{For end users}}}, such as patients and on-site human nurses, {\it physical interactions and collaborations are difficult because robot autonomy may not appear natural and fluent}~\cite{goetz2003matching,strabala2013towards, mitsunaga2008adapting}. This unexpected robot behavior may confuse, surprise or even intimidate end users, adding to patient stress, discomfort and/or anxiety~\cite{nomura2008prediction}.
+% %We propose to avoid ``unnatural'' autonomous robotic behavior by {\bf learning motion primitives from expert teleoperation demonstrations}, which are more natural, and to then adapt these in a user-acceptable manner to new situations.
+% \underline{\textbf{\textit{For the teleoperator}}}, controlling a mobile humanoid robot to perform dexterous coordinated motions %is a non-trivial task. It demands a 
+% involves a {\it significant learning curve for novice users to adapt to the low transparency of the teleoperation system and physical capabilities of the robot}~\cite{rosen2002task,ballantyne2002robotic,novick2003analysis,sudan2012multifactorial,sng2013multiphasic}. This prevents nurses, who have significant first-hand experience and task knowledge, %cannot easily apply their experience of performing nursing tasks with their own hands, and instead have to explore new motion coordinations when controlling a different physical embodiment.
+% from teleoperation that effectively controls the different physical embodiment.
+% In addition, perceiving the remote environment to control position and orientation precisely is difficult despite having many available static and dynamic camera views. The teleoperators' high-level task knowledge of task goals, procedures, and object affordances are still valid, but the low-level motion primitives and their coordination,  as well as the motion-perception mapping have to be relearned through the practice of teleoperation. 
+
+\begin{wrapfigure}{r}{3.0in}
+\centering
+  \includegraphics[width=0.99\linewidth]{fig//001TeleNursing_Overview}
+\caption{Learning from robot-mediated multi-lateral physical human-robot interactions.}
+\label{001TeleNursing_Overview}
+\end{wrapfigure}
+
+\paragraph*{A Novel Framework for Robotic Mediation Between Teleoperators and End Users:} We propose to address the above challenges by leveraging the benefits of {\it human teleoperation primarily at higher-levels of task abstraction} and the benefits of {\it autonomous control primarily at lower-levels of task abstraction}. Shown in~\fig{001TeleNursing_Overview}, our approach is enabled by the key idea of {\bf observing how a robot embodiment equipped with a human mind (of an expert teleoperator) behaves when interacting with and collaborating with people.} In this learning context, the teleoperator and end user adapt to each other and setup a feasible and potentially optimal collaboration paradigm given the physical capability of the teleoperated robotic system. Their joint effort demonstrates to the mediating robot the big picture of task collaboration, and the role it can play as a competent participant. 
+
+% We develop lifelong learning techniques for forming and refining high-level task knowledge and low-level motion primitives from demonstrated expert teleoperation for the nursing tasks of~\fig{Tasks}. 
+
+\paragraph*{Objectives:} Within the framework of robot mediation, we will pursue three research objectives: 
+
+% This project aims to (1) develop the motion intelligence of a mediating robot through learning from multi-lateral physical human-robot interaction, and (2) utilize such motion intelligence to assist novice teleoperator. 
+
+\begin{itemize}
+\item \textbf{Objective 1} --- Enable robot to acquire contextual and customizable task knowledge and motion skills through lifelong learning from collaborative multi-lateral physical human-robot interaction tasks. 
+
+% learned collaborative task decompositions and cooperative inverse reinforcement learning.
+
+% Key idea: Lifelong learning; fuse imitation and reinforcement learning; game theory
+
+\item \textbf{Objective 2} --- Develop fast intention inference approaches for user-adaptive task-sharing, joint performance optimization, real-time motion prediction and recognization. 
+
+% and blended control algorithms for user-adaptive assistance that optimize the multiple objectives of: sub-task performance, gathering information of user intent, and interpretability of robotic control to the end user. 
+
+\item \textbf{Objective 3} --- Implement lifelong robot learning and fast intent inference on the Tele-robotic Intelligent Nursing Assistant (TRINA) system, and demonstrate their performance on assisting novice teleoperators in robot-mediated interactions/collaborations.  
+
+\end{itemize}
+
+\paragraph*{Intellectual Merits}
+Our proposed \textbf{lifelong robot learning approach} aims to overcome the limitations of autonomous motion planning [cite] and robot learning methods [cite], and integrate their advantages in the scenario multi-lateral physical human-robot interaction. , multi-lateral pHRI allows the mediating robot observe the contextual interaction/collaboration between an expert teleoperator and end users, and continuously acquire and update its high-level task knowledge and low-level motion skills. At high-level, robot can learn abstract representation of task structure~\cite{} and probabilistic models that relate actions and effects~\cite{}. It can also learn the object affordance for individual and joint actions~\cite{knoblich2011psychological}. At low-level, the mediating robot can acquire contextual motion skills such as the motion primitives and their temporal-spatial coordination. Such motion skills can be directly use for robot motion reproduction, for its considers effect of robot physical embodiment and the transparency of teleoperation interface, which can not be learned from observing human-human interactions. It also naturally addresses the inter-adaptive phase matching between human and robot and therefore differs from robot learning without human partners. More importantly, our proposed approach integrate off-line and on-line learning so that robot behavior can be customized with minimal new demonstrations and teaching efforts. To account for both behavior robustness and fast adaption, our method compares new demonstrations with the existing models of task representation and motion skills. Efficient incremental learning will be performed if no significant differences are observed. Otherwise, the robot will confirm with the human user and perform significant update task and motion skill models. 
+
+In addition, the \textbf{systematic approach for fast intent inference} we propose enable learning the rewards and constraints that govern (1) the motion coordination under shared autonomous control, and (2) the dynamic task-sharing of robot-mediated nursing tasks that result from the explicit negotiation and implicit adaption between a teleoperator and end user. For instance, the robot can also learn the \textit{motion coordination strategies} such as how to autonomously move the mobile base to facilitate the manipulation when moving a patient transfer bed with a human nurse. It can also learn the \textit{collaboration strategies}, such as where to grasp on the patient transfer bed given the where the human nurse grasps, and how to push the patient transfer bed to assist the human nurse's motion. Besides inferring task rewards and constraints, we are also concerned on real-time motion prediction based on inferring an end user' intent, so that the robot can behave pro-actively and naturally in the interactions with patients. As an adaption to novice teleoperator, we propose an \textit{active intent detection method} to infer the operation an novice intends to perform, and autonomously control the low-level motions accordingly.  
+
+% \todo{Jane: I have finished revision until here!}
+
+% , in the tasks that have complicated structures and/or involve collaborative/interaction manipulation of a shared object. 
+% while staying near the collaborative end user and avoiding people passing by. 
+
+% At low-level, the mediating robot can acquire from the teleoperator the knowledge of the motion primitives and their temporal-spatial coordination. Such knowledge can be directly applied to low-level motion reproduction in pHRI, for its considers effect of robot physical embodiment and the transparency of teleoperation interface, which can not be learned from interactions between humans. It also naturally addresses the inter-adaptive phase matching between human and robot and therefore differs from robot learning without human partners. 
+
+% Our key idea is to let the robot observe how a robot embodiment equipped with a human mind behaves when interacting and collaborating with humans. 
+
+
+% \begin{wrapfigure}{r}{3.0in}
+% \centering
+%   \includegraphics[width=0.99\linewidth]{fig//001Task_Overview_}
+% \caption{Task overview.}
+% \label{001Task_Overview}
+% \end{wrapfigure}
+
+
+% This task involves implementing the proposed motion control strategies on a humanoid nursing robot, and conducting a user study to evaluate their efficacy. The user study will recruit 20 subjects to operate the robot with and without the assistance of the autonomous coordination of the manipulator arm with its micro-structures and evaluate whether such coordination can improve task performance and user experience.
+
+% \paragraph*{Objectives:} This project aims to (1) develop the motion intelligence of a mediating robot through learning from multi-lateral physical human-robot interaction, and (2) utilize such motion intelligence to assist novice teleoperator to coordinate the mobile base with the manipulator arms and to perform dexterous coordinated manipulation. To achieve these goals, this project will pursue the following research objectives: 
+
+% \begin{itemize}
+% \item \textbf{Objective 1} --- Enable lifelong learning for collaborative  multi-lateral physical human-robot interaction tasks through learned collaborative task decompositions and cooperative inverse reinforcement learning.
+
+% % Key idea: Lifelong learning; fuse imitation and reinforcement learning; game theory
+
+% \item \textbf{Objective 2} --- Develop fast intention inference and blended control algorithms for user-adaptive assistance that optimize the multiple objectives of: sub-task performance, gathering information of user intent, and interpretability of robotic control to the end user. 
+
+% \item \textbf{Objective 3} --- Develop, implement, and evaluate intelligent shared-autonomous control modules to assist novice teleoperators in navigation and dexterous manipulation.  
+
+% % \begin{itemize}
+% % \item Develop autonomous navigation strategy to facilitate manipulation tasks
+
+% % \textbf{Key idea}: Lifelong learning; fuse imitation and reinforcement learning; game theory 
+% % item Develop adaptive manipulation assistance based on inferring of motion intent of novice teleoperator
+
+% % \textbf{Key idea}: Coordination of macro- and micro-structure; Coordination policy hypothesis: manipulability, reachability, vision advantage (perception convenience and comfort); minimal intervention of macro-structure (also relevent to energy consumption); environment constraints (static obstacle, prediction of moving obstacle and agents)
+
+% % \end{itemize}
+
+% \end{itemize}
+
+\noindent
+
+% \paragraph*{Intellectual Merits}
+
+% \paragraph*{Broader Impacts}
+
+
+\paragraph*{PI's Qualifications}
+PI Zhi Li has worked on the motion planning and learning of human-compatible and human-like medical robots, including exoskeletons for rehabilitation, arm-like surgical robots and nursing robots, and has spread to the mechanical design optimization~\cite{li2016design}, teleoperation and haptics~\cite{li2009networked,li2009remote}, and physical human-robot interaction~\cite{li2017study}. Related to this proposed project, she has studied reward function that governs the regularity and variability of reaching and reach-to-grasp motions in a 3D workspace, and developed mathematical models that can accurately predict human arm postures in real-time~\cite{kim2012resolving,Rosen_Li_EMBC:13,Rosen_Li_IROSChapt:13,Rosen_Li_IROS:14,Rosen_Li_J:14, li2017reaching}. This motion learning and prediction algorithm can resolve the kinematic redundancy of a dual-arm rehabilitation exoskeleton, and enable it to render arm postures fully compatible with healthy operators and correct abnormal joint coordination due to motor disability. She also developed the Tele-robotic Intelligent Nursing Assistant (TRINA) system, and conducted system capability evaluation under direct teleoperation~\cite{Hauser_Li_TRINA:17}.
+
+
+
+PI Jie Fu's research focuses on planning and control synthesis of verifiable robotic systems. Her thesis work developed a symbolic method for abstraction-based control of hybrid systems that enables scalable planning for complex behaviors under temporally and spatially dependent tasks \cite{fu2013bottom}. Fu introduces grammatical inference \cite{fu2014adaptive} as a behavior inference method to enable adaptive symbolic planning at the task space. In recent work, Fu developed a  planning method for a class of stochastic shared autonomous systems, featuring  human-robot task sharing \cite{fu2016synthesis}. This research effort allows the system to achieve Pareto-optimality for system  performance while balancing against human efforts. Other related  work  includes game theoretic planning for multi-agent systems under  temporal logic tasks \cite{fu2015concurrent} and approximate optimal control under temporal logic constraints, which include common temporally extended goals \cite{fu2017sampling}.
+
+PI Brian Ziebart is an expert in structured prediction methods for sequential behavior.  Ziebart developed maximum entropy inverse reinforcement learning (MaxEnt IRL) \cite{ziebart2008maximum,ziebart2010modeling} to learn the utilities motivating demonstrated behaviors while simultaneously providing robust prediction guarantees. 
+Ziebart's projects based on these methods have enabled more accurate predictions of user intent in pointing tasks for graphical user interfaces \cite{ziebart2012probabilistic}, physical motions \cite{monfort2015intent}, and teleoperation \cite{schultz2017goal}.
+Recently, Ziebart has developed methods for accelerating predictions of these methods using ideas from heuristic-guided search \cite{monfort2015softstar} and hybrid decompositions of the state space \cite{byravan2015graph}.
+
+
+%-------------------------------------------------------------------------
+\section{Background and Related Work}\label{sec:related}
+%-------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------
+\subsection{Background --- Toward a robotic nursing assistant of motion intelligence}\label{sec:related-TRINA}
+%-------------------------------------------------------------------------
+
+\begin{wrapfigure}{r}{3.5in}
+%   \vspace{-3em}
+  \includegraphics[width=0.99\linewidth]{fig//TRINA_system}
+    \caption{(Left) The Tele-robotic Intelligent Nursing Assistant (TRINA) system and (Right) its operator console which can support direction teleoperation and shared-autonomous control.}
+    \label{fig:Trina}
+\end{wrapfigure}
+
+\noindent
+The rapid development of telerobotic approaches promises a future that synergizes the capabilities of robots and remote medical personnel to improve the quality, availability, and affordability of healthcare. For example, these technologies minimize the risks of exposure to highly infectious diseases for  healthcare workers like nurses, Emergency Medical Technicians (EMTs), and aid workers during outbreaks, such as the Ebola and Zika epidemics of 2014--2016. With the support of NSF grants (NSF RAPID \#IIS-1513221 and NSF CAREER \#1253553), our previous work developed the Tele-robotic Intelligent Nursing Assistant (TRINA) system to act under teleoperation as a surrogate for medical personnel to perform frequent light- to medium-duty caregiving tasks in quarantine environments~\cite{Hauser_Li_TRINA:17}.
+
+\paragraph*{Platform} Shown in~\fig{fig:Trina}, this nursing robot consists of a dual-armed humanoid torso (Rethink Robotics Baxter), an omnidirectional mobile base (HStar AMP-I), and three-fingered grippers (Righthand Robotics ReFlex grippers) on each hand to enable manipulation and indoor navigation capabilities.  A telepresence screen, microphone, and speakers provide bidirectional audio/visual communication between operator, patients, and other healthcare workers at the remote site. The power cable roller has a 30-foot extension cord that retracts and locks at any length, providing a large enough range of motion to traverse a typical hospital room.   A variety of sensors situated on the robot provide visual feedback, including the built-in ultrasonic rangefinders to detect people in the robot's vicinity, a Microsoft Kinect 2 attached to the robot's chest, two Intel RealSense F200 3D cameras attached to the robot's wrists, two Huokuyo LIDAR sensors attached to the mobile base. All of the RGB+D/LIDAR sensors contribute to building 3D maps of the environment, which are provided to the operator's console. Four computers are mounted on the robot's chassis, one for motion control and three for vision processing. 
+
+% \jie{include a description on how you want to improve the mechanical design of the precise positioning unit.}
+
+\paragraph*{System capabilities and limitations:} The capability of TRINA has been evaluated over frequently performed nursing tasks in a simulated patient room~\cite{Hauser_Li_BiTelepresence:17}. Our study shows that under direct teleoperation, TRINA is capable of performing most of the tested tasks. However, despite of our efforts in developing an informative, versatile, and intuitive user interface, it is still challenging for novice teleoperators to learn the perception mapping (hard to understand camera view) and motion mapping (from input device to the robot) of the teleoperation system. Here we present the perception and motion control challenges observed in the direct teleoperation of nursing tasks~\cite{li2017development}: 
+
+\noindent
+(1) Perception Challenge --- Human teleoperator perceives the task and environment primarily through robot cameras, and has deep learning curve for estimating the spatial relationship from fixed and/or moving camera view: fixed camera has limited vision range and perspective, while moving camera poses challenges in estimating object spatial relationship, particularly for distance and orientation. On the other hand, the nursing robot on-site can observe the task directly and in close distance; It is also capable of accurately perceiving the spatial relation (e.g. object position, relative distance), and motions (e.g. the estimated speed of a moving object).
+
+\noindent(2) Motion challenges --- Novice teleoperators have many difficulties in controlling the coordination of many degrees of freedom. It is hard to control dexterous motions that require coordination between two arms, between arm and hand, or between manipulator arms and mobile base navigation. In addition, It takes significant efforts to learn the mapping from input device operation and robot motions, particularly for precise control of  orientation. To novice teleoperator, controlling relative motion (moving left/right, further/close with respect to reference object) is easier than controlling absolute motion (moving to a specific x, y, z). They cannot distinguish/control motions that slightly differ in velocity and direction very well. Due to significant challenges in motion control, a teleoperated robot cannot behave fluently and naturally in terms of arm posture and the timing of its responses When interacting with a human end users. Direct teleoperation demands overwhelming control effort such that a teleoperating nurse do not have very much attention to communicate with a patient, which is an essential component of patient-caring. 
+
+\paragraph*{A nursing of motion intelligence} Despite of the above perception and motion control, human teleoperators are still far more superior in high-level task planning, task performance evaluation (if the task is performed to the level of satisfactory), correction (re-planing the based on current task status) and interactive response. A paradigm of share-autonomous control or supervisory control will combine the human capability of decision making and task performance evaluation, correction, with the robot's capability of perception and motion accuracy. Thus, we believe it is necessary to equip the nursing robot with the capabilities of lifelong learning and fast intent forecasting, and develop user-adaptive assistive modules to reduce the learning and operation efforts in tele-nursing robot control. For instance, a tele-nursing robot of such motion intelligence would rather interpret and process their operation of input devices as high-level motion intent (e.g., reaching towards an object), instead of execute as direct command (e.g., the robot end-effector trajectory). 
+
+
+% Therefore, the teleoperation system  The proposed user assistive module aims to combine the human capability of decision making and task performance evaluation, correction, with the robot's capability of perception and motion accuracy. To justify the design of user assistive module, here we present the perception and motion control challenges observed in the direct teleoperation of nursing tasks~\cite{li2017development}:
+
+% it is difficult for  it is still challenging for novice users to learn the spatial relationships of the workspace from a combination of static and moving camera views. 
+
+% Despite our efforts in developing an informative, versatile, and intuitive user interface, 
+
+
+
+% To address the above challenges, 
+
+% For instance, the teleoperation system would rather interpret and process their operation of input devices as high-level motion intent (e.g., reaching towards an object), instead of execute as direct command (e.g., the robot end-effector trajectory). The proposed user assistive module aims to  To justify the design of user assistive module, here we present the perception and motion control challenges observed in the direct teleoperation of nursing tasks~\cite{li2017development}: 
+% \jie{This problem formulation should be merged with task 2.}
+
+% It  the strength of human and robots in perception and motion control while compensating the weakness of each other. 
+
+% \jie{need a mathematical formulation. Related: intention-aware motion planning in mixed-observation MDP. However, the challenge is that novice users's demonstration can be errornous. Potentially we can propose to use expert demonstrations to infer the intention of novice users, based on human motion similarity. May relate to Co-active learning.}
+
+
+
+% \paragraph*{Lessons learned:} The limitations revealed in previous capability evaluations show that it is necessary to endow the nursing robot with motion intelligence to understand collaborative task decompositions and assignments, and to provide adaptive assistance based on the human teleoperator/partner's level of skill. In multi-lateral pHRI, collaborative task decomposition not only concern what operation a shared object can afford, but also the dynamic task-sharing between the teleoperated mediating robot and the human partner on-site. From expert teleoperator and end user, a mediating robot can observe their robot-mediated collaboration to acquire high-level models for the collaborative task decomposition, including the \textit{dynamic task-sharing} and \textit{shared object affordance}. It can also learn low-level models for movement primitives and their temporal-spatial coordination, to automate the precise low-level control based on the explicit and/or implicit user intentions.  
+
+% \jie{In this paragraph, we need to clarify which tasks are teleoperated. For example, dexterous in-hand manipulation may be autonomous while the user tele-operate macro-action. this is to remove the concern that we will track users' figure to perform tele-op of robot hand.}
+
+
+
+
+%-------------------------------------------------------------------------
+\subsection{Related work in literature}\label{sec:related-liter}
+%-------------------------------------------------------------------------
+\paragraph*{Lifelong learning through human-robot interactions}
+
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=2in]{fig/trajectories.png}
+% \includegraphics[width=2in]{fig/learned_cost.png}
+% \includegraphics[width=2in]{fig/forecast.png}
+% \end{center}
+% \caption{(left) Users' trajectories within an environment. (center) A learned cost function explains trajectories as solutions to plans (red is high cost). (right) A forecast of future trajectories (red is most likely).}
+% \label{fig:forecast}
+% \end{figure}
+
+
+Programming robots to appropriately perform nursing tasks across a wide range of
+contexts is a daunting task.  Automatically learning in a flexible manner is far more desirable, but
+classical machine learning paradigms, though appealing in theory,
+are ill-suited.
+Reinforcement learning, for example, would require inordinate amounts of
+feedback (including feedback for robot actions leading to negative outcomes)
+before appropriate behaviors could possibly be realized.
+To avoid this difficulty, we propose directly learning appropriate
+assistive behavior from the demonstrations of the expert teleoperator.
+Though many forms of imitation learning exist \cite{argall2009survey}, we focus on two: {\bf learning dynamic motion primitives} that can be adapted for new contexts, and {\bf inverse reinforcement learning}, which seeks utility functions that make demonstrations rational in sequential decision and control processes.
+
+\paragraph*{Intent forecasting in robot-mediated interactions}
+Nursing robots, as well as similar assistive/social robots, are expected to render fluent and natural motions when they interact/collaborate with human partners~\cite{calinon2009learning,strabala2013towards}. The fluency of frequent human-robot interactions, such as human-robot object handovers, dominates the task performance and significantly affects the experience of end users. As a competent partner, a robot should behave pro-actively based on the human partner's inferred intents. Although human intent can be inferred from more intentional and explicit cues (e.g., gaze, body gestures~\cite{huang2016anticipatory}), inferring the implicit intent encoded in human motion may be more important since it minimizes end user effort for maintaining explicit or even exaggerated human-robot communication. At a low-level, a robot can predict its human partner's motion based on the knowledge of tempo-spatial coordination observed in human-human interactions~\cite{Hogan_Flash:85, sisbot2012human,huber2010assist, glasauer2010interacting, strabala2013towards, li2015rssworkshop, perez2015fast,maeda2017phase}. At a high-level, the intent inference problem can be formulated as a parameter inference problem and tackled using techniques such as inverse linear-quadratic regulation (ILQR)~\cite{monfort2015intent} and approximate expectation-maximization~\cite{ravichandar2017human}, or modeled as a Markov decision process so that the human partners' future course of action based on the knowledge of the human partner's goal sequences, recent action history, and observed correlation between behaviors with actions~\cite{mcghan2015human}. \todo{BDZ: should we focus on this?} However, given the state-of-the-arts methods for motion prediction and motion intent inference haven't fully considered that towards a successful collaboration, \textit{the collaborative partners do not necessarily insist their intial intents, but adjust their intents based on the explicit negotiation of task-sharing and/or inter-adapation of each other's capability}: What one can do and will do depend a lot on what his/her partner can do and will do. In human-robot interactions, it is quite usual that humans adapt too much to the robot partners for they are much superior in physical dexterity, task experience and decision-making intelligence. In addition, they are not clear about what the robot can do given its physical capability and intelligence. To gurantee the task success, they have to make conservative assumption for the task load a robot can share. Although the collaborative task succeeds, robot may end up with little contribution towards their shared goal, and even perform lower than their potential. \textit{Our proposed framework of learning from robot-mediated interactions is very effective method to fix this problem}: An expert teleoperator will not only endow the mediating robot with the human-level intelligence for decision-making, but can also investigate how to fully exploit its physical capabilities in interactive/collaborative tasks. From a human partner's perspective, it is also convenient to negotiate with the teleoperator for the optimal task-sharing, and establish an ideal collaboration paradigm for the mediating robot to perform the task under shared autonomy. 
+
+
+
+%-------------------------------------------------------------------------
+
+
+
+% The natural separation of macro- and micro-structures in human arms has inspired the development of robotic manipulators with macro- and micro-structures~\cite{Nagai:94,Murakami_Yoshikawa:93}. 
+% However, little work has been done to relate the control strategy for coordinating macro- and micro-structures with the motion studies on human arm-hand-finger coordination. For example, human motion studies have revealed that a reach-to-grasp motion can be constructed from a reaching motion toward the same target position. If the target orientation is perturbed when the hand is still approaching to the target, the hand path will remain approximately the same, while the hand orientation will be gradually turned from the one that matches the original target orientation to the one that matches the new target orientation~\cite{Tillery_Fan:06}. The PI's research on reach-to-grasp motions further pointed out that (1) the arm posture will adjust to accommodate the grasping hand pose, and (2) if there exist multiple DOFs that can be used to satisfy the same task specification (e.g., the grasping orientation in one dimension), the DOFs of the macro-structure will be largely unused until the DOFs of the micro-structure have been mostly exploited. On the other hand, redundancy resolution strategies have been proposed for flexible-macro/rigid-micro manipulators~\cite{Yoshikawa_Nakamura:87,lew1995micro}, compliant base manipulators~\cite{lew2001simple}, and coarse/fine dual-stage manipulators~\cite{kumar2000augmentation, kwon2001coarse,dong2008stiffness}, so that the macro- and micro-structures can compensate each other in terms of precision and motion range. The redundant DOFs can be used to resist perturbations/vibrations~\cite{lew1995micro, kwon2001coarse}, and they can also enable the micro-structure to satisfy additional task constraints or to maintain a desired level of manipulability~\cite{Yabuta_Quan:06,Yabuta_Huang:06,Yabuta_Huang:10}. These motion coordination strategies cannot render natural-looking motions and therefore cannot be directly applied to coordinating the arm and hand of humanoid and human compatible robots when human-like motion is desired. The existing research efforts are also limited by their focus on individual reaching or grasping tasks. It is unclear when and how to move which parts of the robot to better perform tasks in sequence, tasks in a group, and tasks that require different motor skills, or to be better prepared for unexpected tasks.
+
+\pagebreak
+
+%-------------------------------------------------------------------------
+\section{Research Plan}\label{sec:plan}
+%-------------------------------------------------------------------------
+
+Our research plan is divided into three activities: lifelong learning of collaborative task knowledge (Activity 1); real-time inference and control blending using that task knowledge to mediate between teleoperator and users (Activity 2); and deployment and evaluation of the system for collaborative nursing tasks (Activity 3).
+
+%-------------------------------------------------------------------------
+\subsection{Activity 1 --- Lifelong learning of multi-lateral physical human-robot interaction}\label{sec:plan-motion}
+%-------------------------------------------------------------------------
+\noindent
+%Goals: %\textbf{Learning from robot-mediated multi-lateral physical human-robot interactions/collaborations, to acquire knowledge of collaborative task decomposition.} 
+{\bf Problem statement:} In our first research activity,
+{\bf we seek to construct task knowledge from teleoperated demonstrations of robot-mediated multi-lateral physical human-robot interactions/collaborations}.  To accomplish this, we propose to 
+segment demonstrations of cooperation into coordinated motion primitives with parameters estimated from data (Activity 1.1); 
+use automata learning methods to define a language that forms motion primitives into sub-tasks and sequences of sub-tasks into collaborative tasks (Activity 1.2); and employ inverse reinforcement learning to estimate a utility function that is predictive of the teleoperator and human partner's preferred task decomposition and assignment of roles to sub-tasks
+(Activity 1.3).
+
+% and tempo-spatially coordinated motion primitives
+ 
+% (a) Low-level parameterized controller (goal point can be a parameters)
+% (b) grammatical inverse problem - composition (language generalization)
+% (c) Efficient learning and generalization
+% (d) Inter-dependency of motion primitives
+
+
+
+% Motivation (Jane: please add one example to illustrate the contingency and variety of tasks in teleoperate system. The goal is to motivate the need to construct com-posable modules and building the task sequences from a language perspective)
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 1.1 --- Learning low-level coordinated and interactive motion primitives}\label{sec:plan-motion-low}
+%-------------------------------------------------------------------------
+
+Motor primitives are the building blocks of complex and goal-directed motor skills~\cite{flash2005motor}. Inspired by human motor primitives, computational models for robot motion primitives, such as dynamical movement primitives~\cite{ijspeert2013dynamical}, have been proposed for learning and producing episodic and rhythmic motions of spatial and temporal coordination. More recently, probablistic modeling of motion primitives has been proposed to better address demonstration regularity and variability for imitation learning~\cite{calinon2007learning,calinon2010learning}, or to account for sensing uncertainty in the feedback loop control for motion reproduction~\cite{meier2016probabilistic}. In the context of human-robot interaction, probalistic motion primitives (Pro-MP) has been used for modeling the temporal and spatial dependency of human and robot motion during object handovers~\cite{maeda2017phase}. Beyond the field of imitation learning, constructing parameterized action/motion primitives has also been investigated by the robotic control \cite{fu2013bottom} and the reinforcement learning communities \cite{masson2016reinforcement}. Different from the motion primitvies derived from Guassian basis regression, a parameterized action is a discrete action parameterized by a real-valued vector. For example, a navigation controller is an action that is parameterized by a goal position. For a given parameter, a low-level optimal control/motion plan can be generated. Recent work in \cite{masson2016reinforcement} proposes a RL algorithm to simultanuouly learn both the optimal parameter and the low-level policy in Markov decision processes. However, such an episodic approach does not address spatial and temporal dependency between a set of parameterized actions. 
+
+Our goal for low-level learning is to construct \textbf{three types of coordinated motion primitives} necessary for human-robot interactive/collaborative tasks. We consider three types coordination: (1) \textit{independent motion primitives} account for the coordination of independent robot motions (e.g., the bimanual coordiantion of the nursing robot); (2) \textit{interactive motion primitives} account for the coordination between human and robot (e.g., the human-robot hand motion coordination in a handover task); and (3) \textit{sensory motion primitives} address the coordination of robot motion for task execution and active sensing. Note that the nursing robot is equiped with a static camera on its chest and moving cameras attached to its wrists. It can also access external cameras in a patient room. To leverage its visual advantanges, the robot can (a) bring the manipulated object into its preferred camera view, (b) move the hand with wrist camera to observe the manipulating hand from a preferred perspective, and (c) move the body and/or hand to provide the external camera with a better view. 
+
+Here we briefly describe \textit{our proposed approach for learning coordinationed motion primitives}: Given the demonstrated robot-mediated interactions/collaborations, we will perform autonomous data segmentation to identify and separate motion primitives~\cite{fod2002automated, barbivc2004segmenting, meier2012movement}. We further use the dynamical movement primitive model~\cite{ijspeert2013dynamical} to fit each motion segment, and classify motion segments using the weighting coefficients as features. For similar motions, we combinie the Gaussian Mixture Model (GMM) with Gaussian Mixture Regression (GMR) and Hidden Markov Models (HMM) to model the regularity and variability for clustered demonstration segments~\cite{calinon2010learning}. Given the extracted motion regularity and variability, we propose to use a novel probabilistic model for learning and reproducing the coordinated motion primitives: 
+\begin{itemize}
+
+\item The \textit{independent motion primitives} model the coordination among the degrees of freedom of a robot, such as the arm joint coordination when a robot reaches to grasp an object.    Given multiple observation of teleoperated reaching motions, we will first align the multiple demonstrations in a task-specific reference frame with minimal demonstration variance, and then use dynamical movement primitives~\cite{ijspeert2013dynamical} to capture the average trajectories of the DOFs in temporal and spatial coordination. Given the motion variability found by GMM/GMR, we will associate a multi-dimensional Gaussian to each basis of the dynamic movement primitive model, to address the covariance among the coordinated DOFs. Our model also considers the estimation uncertainty of robot and environment states following the example of probabilistic movement primitives ~\cite{meier2016probabilistic}. 
+
+\item The \textit{interactive motion primitives} represents the coordination between a human and robot. We extended the concept of phase matching using probablisitic movement primitives~\cite{maeda2017phase} from the context of one-to-one human-robot object handover, to multi-lateral human-robot collaboration/interaction with shared intent. Consider a nursing task of human nurse and nursing robot collaboratively moving a clumsy patient transfer bed: both the human nurse and nursing robot need to use their two hands to manuever patient transfer bed in a cluttered patient room. As a result, our proposed method for learning the interactive motion primitives will model the high-dimensional motion correlation among all the human/robot arms, as well as the their correlation with static and moving landmarks in the environment. To improve the generalization capability, our method will use reference frame learning methods~\cite{cederborg2010incremental,dong2012learning} and account for the relative pose/distance between human/robot and the shared object they manipulate.  
+
+\item The \textit{sensory motion primitives} is proposed for coordinating the robot motions for active sensing and for performing tasks. Our previous system evaluation has demonstrated that an expert teleoperator actively adjusted the robot wrist camera on one hand to see the manipulation task being performed by the other hand. An expert teleoperator also adjust the nursing  robot's arm/body posture so that task can be better seen by an external camera. As a result, we propose to learn the active sensing motion primitives (e.g., the motion of adjusting the observing wrist camera on one arm) with the tasking performing motion primitives (e.g, the motion of reaching to grasp an boject using the other arm). We will also use the probablistic models of coordinated motion primitives to learn and reproduce the coorelation the robot's task-performing end-effector trajectories     with the trajectories observed by different cameras. 
+
+% , to facilitates a novice user's need when control the robot under shared autonomy. 
+
+% From the demostrated robot mediated interaction, we aim to  To be specific, 
+
+% \jie{In the last sensory motion primitive, you may want to include the learning of sensory motion primitives with vision-based planning/control. The generalization of primitives on different tasks may cause the blocking of views. It is better to plan this goal of sensory motion primitive based on what the users need to see/observe.}
+\end{itemize}
+
+% is to learn from observation both temporally dependent and coordinated task sequences/collaborative task decomposition?
+
+
+% \paragraph*{Robot motion coordination in physical human-robot interactions}
+
+% Three types of coordination: joint coordination in low-level tasks (DMP), coordination of manipulation and navigation, coordination between human and robots in collaborative/interactive tasks (ProMP). 
+
+% \paragraph*{Coordinated Interactive Motion Primitives}
+
+% \zhi{(1) Joint coordination --- (probabilistic) DMP; (2) Interactive motion primitives --- Extended ProMP; (3) Coordination of active motion with active sensing --- coordinate the arm with wrist camera with the hand performing manipulation tasks; (4) Coordinate redundant DOFs with teleoperated DOFs --- redundancy resolution}  
+
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 1.2 --- Learning high-level collaborative task decomposition}\label{sec:plan-motion-high}
+%-------------------------------------------------------------------------
+
+\paragraph*{Problem Formulation} At a high-level, we aim to learn the space of possible collaborative task decompositions from the interactions between human end users and a teleoperated nursing robot. To illustrate collaborative task decomposition, consider two typical scenarios for collaborative tasks: 
+
+\begin{itemize}
+\item {\it A task without a shared object}: For a task that consists of multiple sequential/parallel subtasks, human and robot are responsible for different subtasks but do not interfere with each other. Although they do not cooperatively manipulate any shared object, they affect each other's action and performance because (1) the step completed by the robot must precede the actions of its human partner and (2) the effectiveness of the robot at its current subtask %step (measured in terms of accumulated reward) 
+will influences its partner's efficiency in the next subtask. %cause its partner to improve, maintain, or decrease performance in the next step. 
+In this case, the collaborative task decomposition will define which subtasks are assigned to the human and robot by matching their physical capabilities to the task affordance. Particularly, for the steps that the robot is responsible for, it defines the acceptable range of final states. % and/or acceptable performance measured by accumulative reward in the collaboration.  
+
+\item {\it A task with a shared object}: For some subtasks, the human and robot cooperatively manipulate a shared object. In this case, the collaborative task decomposition specifies which part of the object is possible for the human/robot to manipulate given the object affordance, in addition to possible subtask role assignments and acceptable final states. % and task performance. 
+For instance, for the task that human nurse and nursing robot cooperatively manipulate a patient transfer bed, where the robot can grasp and push the bed depends on where the human nurse grasps and pushes, and vise versa. As the shared object involved, the temporal and spatial motion coordination between human and robot becomes more critical. It is also important to extend the concept of individual object affordance to shared object affordance and define their affordable operation in abstract representation. 
+
+\end{itemize}
+
+% \paragraph*{Abstraction-based control and learning}
+\paragraph*{Learning abstract representations of collaborative task decompositions}
+% \zhi{this can be used to learn high-level collaborative task decomposition}
+% To learn from the robot-mediated interaction, explicit learning and programming each task sequence is not only time consuming but also inflexible given any changing environment, e.g. different patient needs, changed operating rooms, cooperated nurses.
+We consider multiple approaches for learning the abstract representation of collaborative task decompositions. Our first approach is to \textbf{integrate automata learning and abstraction-based design for hybrid systems}, to design a tele-operating system featuring highly reusable and parametrizable low-level controllers. From a system abstraction viewpoint, the set of high-level tasks that can be achieved jointly by the teleoperation system, the human nurse, and the patient, can be understood as a \emph{language} $L$ over the \emph{alphabet} $\Sigma$. Each symbol in the alphabet corresponds to a low-level closed-loop controller with certain parameters. For example, approaching a desired goal position is achieved with a navigation control parameterized by a goal position and velocity, while picking an object is parameterized by the object affordance, force control, and object position. With the low-level parameterizable control actions, i.e., alphabet, a high-level feasible task becomes a \emph{sentence composed of symbols with appropriate parameterization}. For example, the concatenation of go to the table ($a(p_1)$) and pick up the cup on the table $b(p_2)$ is only possible if the goal position $p_1$ makes the cup within the reachable workspace of the manipulator. This is similar to pre- and post- conditions of actions in situation calculus \cite{}, except that we now use parameterized actions to enable generalization and flexible reusing of the low-level controller. Building with parameterized actions, we construct symbolic models of a dynamic system with methods \cite{fu2013bottom}. For time-invariant systems, the symbolic model can be represented as an automaton, which is a representation of a language.
+
+%Our goal is to achieve high-level task learning and reasoning by integrating this abstraction-based control synthesis for hybrid systems with abstraction-based learning from demonstrations.
+
+Abstraction-based learning seeks to define the abstract language $L$ using a set of task sequences from human experts, which is exactly the \emph{language of the teleoperation system}. Thus, we propose to use grammatical inference (GI) \cite{de2010grammatical} to generalize from observed  high-level task sequences to an automaton or grammar representation of the language. GI is a class of algorithms that generalize from a finite number of sentences to provide a grammar that describes the language, which may contain infinitely many words. As an example, consider the tele-operated robot accomplishes the task of ``picking up the cup (P) and handing it over to the nurse (H)''. Using the inference algorithm, the robot knows that it is capable of picking up and handing over not just once, but potentially infinitely often (See the Figure for description of generalization).
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+\input{fig/fsa1.tex}
+\end{center}
+\begin{tabular}{ l c }
+  \hline
+  Positive Observations & $GI(\phi[i])$\\
+  \hline
+  $\phi(0)= \#$ & $\emptyset$ \\
+  $\phi(1)= PH$ & $\{\textcolor{blue}{\ltimes
+    P,PH,  H\rtimes}\}$ \\
+  $\phi(2) = P\textcolor{blue}{HP}H$ & $\{\ltimes P, PH, H\rtimes, \textcolor{blue}{HP}\}$  \\
+  \hline
+\end{tabular}
+  \caption{An example illustrate one GI algorithm: A word belongs to a language iff its subsequences belongs to a set of factors. Both the automaton and the set $GI(\phi[3])$ represents the same language $(PH)^\ast$: A feasible behavior of the robot is to pick up and handover indefinitely many times. The learner remembers the set of 2-factors seen in the demonstration, and includes it in the grammar set. The generalization is achieved because the factors of $(PH)^k$ for any $k$ are contained in $GI(\phi[3])$---the set obtained after observing only three demonstrations.}
+\end{wrapfigure}
+ We will consider several inference learning algorithms, such as \cite{heinz2013learning} for learning from positive demonstration under the assumption that actions have pairwise dependency, and the $L^\ast$ algorithm, which learns from both positive and negative demonstrations \cite{angluin1987learning}, given that negative demonstrations may be obtained from the nurses’ feedback of unreasonable behaviors. We propose to learn, for three interacting agents, their individual alphabets and languages. In addition, action synchronization, conflict, and sequencing will be captured by the  product operations between languages/automata, including but not limited to, synchronization composition and sequential composition \cite{alur2015principles,hopcroft2001introduction}. 
+For instance, synchronization product will enable us to capture the dependency of the action of aiming the camera at the hand of human nurse with the reaching motion for the manipulator. Behavior-level uncertainty 
+ may be captured with using probabilistic automata as behavior models, for which polynomial time algorithms exist to infer from positive demonstrations \cite[Chap 12]{de2010grammatical}. 
+ 
+\jie{It is a bit lengthy and tedius, I put it here for now but we will see if it is truly needed.}
+ 
+ We seperate the concern of low-level learning and describe later a statistical model will be used to capture low-level parameterization—similar to goal-directed intent— due to the inherent nondeterministic decision making or behavior uncertainty of humans. Instead of positioning at a specific pose, statistical methods will learn a distribution of possible poses for manipulation tasks using intention-aware planning \cite{bandyopadhyay2013intention}, where the goal of manipulation is treated as a hidden parameter and can be inferred from the demonstration using Bayesian reasoning.
+
+In addition, we also consider the approach of constructing skill tree~\cite{konidaris2012robot} and extend this concept to \textbf{shared skill tree} to encompass the robot-mediated collaboration scenario. Unlike the skill tree that model the high-level task plan executed by a single agent, our shared skill tree includes the nodes for the task steps shared by human and robot, which are further connected to the interactive motion primitives at low level. It also uses probabilistic transition to denote the transition to the possible next steps, particularly indicating given the previous action and state of human (robot) at current task step, whether the next step can be taken over by the robot (human) partner. In the framework of shared skill tree, we will integrate the idea of high-level symbolic representations to model the tree component that involves complex collaboration~\cite{konidaris2018skills}. This method abstracts actions and states as symbols and therefore formulates a complex planning task to set and propositional operations. To adapt to the robot-mediated collaboration scenario, we revise the framework in~\cite{konidaris2018skills} by associating the symbolic representation of actions and states to their human/robot owner, so that the high-level task representation can be more inclusive and flexible. 
+
+The high-level learner abstracts away low-level parameter but focuses only on the behavior coordination and task decomposition level. Next, we propose methods for low-level learning of parameterized actions. 
+%  to (1) use high-level symbolic representation for task modeling at high-level, 
+
+
+% present CST, an online algorithm for constructing
+% skill trees from demonstration trajectories. CST segments a demonstration trajectory
+% into a chain of component skills, where each skill has a goal and is assigned a suitable abstraction
+% from an abstraction library. ese properties permit skills to be improved efficiently using a policy
+% learning algorithm. Chains from multiple demonstration trajectories are merged into a skill tree.
+
+% \zhi{I will also add GEorge Konidaris' method of Constructing Skill Trees by Demonstration, and extend his framework to shared skill tree that consist of the skills of on-site human nurse and the skills of robots --- this could be an alternative method for learning collaborative task decomposition; Also refer to his work on Learning Symbolic Representations for Abstract High-Level Planning }
+
+
+\paragraph*{Learning shared object affordances:}
+
+Object affordance defines the operations that an object can afford a human/robot operator to perform~\cite{gibson2014ecological}. Learning affordance aims to establish the relation between the consistent changes of the object states and the robot’s action sets. As a high-level task knowledge, object affordance not only enables the object to be categorized by their functions, but also correlates a robot's general low-level motor skills with specific task contexts~\cite{fitzpatrick2003learning, veloso2005learning, thomaz2009learning,lopes2007affordance,montesano2008learning, lopes2010abstraction, kjellstrom2011visual,aksoy2011learning}. Research efforts thus far have investigated the affordance of a object manipulated by a single operator, yet it is still unclear in cooperative manipulation tasks, given operations the human and robot partners can apply to the shared object, what will be the appropriate task sharing. For example, when a human nurse and a nursing robot collaboratively removes a dirty blanket from a patient, given that where the human nurse has grasped on the blanket, the robot needs grasp the other corners so that the blanket will not be drag away but will be lifted and removed. Although the blanket afford grasping at any point, as a shared object in cooperative manipulation, the robot operation it can afford is determined by the applied human operation. 
+
+To learn shared object affordances, we propose to create a hierarchical object affordance library that categorizes objects by their functions. We further associate to the objects in the same sub-category (1) the set of relative grasping point of human and robot hands, and (2) a set of interactive motion primitives that represent the motion coordination between human and robot. Take the task of removing dirty blanket for example, the set of interactive motion primitives learned from the demonstration of robot-mediated cooperative manipulation provides the motion partner so that the robot will know where to grasp on the blanket and how to move with respect to the observed human partner's grasping point motions. 
+
+\paragraph*{Shared autonomy through Task-specific generalization:}
+Intelligent task affordance learning should not only reproduce expert demonstrations for the set of training tasks but also generalize to achieve good performance for tasks that have never been encountered before. At low-level motion described by DMP, action generalization methods has been developped in \cite{ude2010task}. The method generalizes from a set of DMP parameters, each of which is for  a specific configuration, to a function $f: q \mapsto (w, \tau, g)$   that maps from the continuous configuration space to the continuous DMP parameter space (linear parameter, phase, and goal). We propose a two-tier approach to combine task-specific DMP generalization with goal inference and task affordance learning to develop guided assistance for novice teleoperator. The approach decouples motion guidance from task guidance: Task guidance directly relates to task affordance learning and aims to  guide the novice user step by step in completing a specific dynamic task with sequential composition of local subtasks. Motion guidance aims to generate guiding force via haptic devices so that the user can be assisted to achieve motions that requires dexterous manipulations, such as reaching in cluttered environment, reaching and grasp with autonomous object affordance reasoning for the best grasp.
+
+% During the cooperative manipulation, the robot keeps monitoring the trajectories of the object's manipulation-related states,  
+
+
+% , and (2) the set of motion primitives that model the  trajectories of the object's manipulation-related states during their cooperation
+
+% Under shared-autonomous control, if the supervisory teleoperator notice 
+
+
+
+
+
+% the model the temporal and spatial correlation between human/robot hands with respect to each other, and with respect to the moving center of the blanket.  
+
+% \zhi{(1) Learning functional object affordance; (2) Learning shared object affordance from collaborative manipulation} 
+
+
+
+% \textit{\textit{\jie{goal-directed learning shall be coupled with inverse reinforcement learning to capture not only the goal, but how the human operator achieves the goal.}
+
+% \jie{Possible subtasks based on discussion: Jane suggested skill tree learning and low-level DMP learning. Propose to use shared intent inference} 
+
+% \zhi{Learning the coordination of mobile base with manipulation --- as far as the reward function concerned, here are several coordination policy hypothesis: manipulability, reachability, vision advantage (perception convenience and comfort); minimal intervention of macro-structure (also relevent to energy consumption); environment constraints (static obstacle, prediction of moving obstacle and agents)}
+% }}
+
+% \paragraph*{Share intent inference}
+
+% * What is the problem?
+
+% * Formulation (mathematical)
+
+% * proposed approaches (at least two): 
+
+
+% \paragraph*{Problem Formulation}
+% * Task 1 - Learning physical interaction with nurse and with patient 
+
+% 	* Demo 1 - Human nurse hand-over object to patient
+
+% 		* Learning object/task affordance
+% 		* Learning the phase matching in human-human interaction
+% 		* Learning how the human nurse adapt to the patients with limited motor capability 
+% 	* Demo 2 - Expert teleoperator and human nurse perform robot-mediated collaborative task
+
+% 		* Human nurse leads the task
+% 		* Learning from teleoperator's responsive motion to the end user 
+% 		* Robot controlled by the teleoperator can learn from the teleoperator the feasible and appropriate operation given the robot's limited physical capability and teleoperation transparency
+% 		* Teleoperator can communicate with human nurse on-site tof negotiate via bidirectional telepresence
+
+% 			* Teleoperator who can not precisely perceive the spatial and temporal information of the task from inconvenient and/or insufficient camera view
+% 			* The teleoperator can receive feedback in terms of verbal critique and gestures from the end user
+% 			* The bilateral communication between teleoperator and end user can compensate the lack of information and correct the motion errors due to mis-perception
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 2.3 --- Fast adaptation of motor skills to personalized user needs}\label{sec:plan-motion-high}
+%-------------------------------------------------------------------------
+Through low-level and high-level learning, we have constructed the motion intelligence of the mediating robot that consists of general task knowledge and general motor skills. Here we further propose a framework that evolving the robot's motion intelligence for fast adaption to the personalized needs of human users. Our key idea is is built on three levels abstraction of motion knowledge: A robot of motion intelligence should be equipped with computational models for \textbf{General Motion Templates} --- the motion knowledge hierarchy from the low-level motion templates to the high-level motion plans; \textbf{Special Skills} --- the highly customized motor skills that address a user's particular needs in the activities of living and workplace. The two aspects of motion knowledge differ in their generality and thus require different strategies for acquirement, maintenance and refinement. In a unified motion planning, control and learning framework, we propose to establish the inter-connection and transformation between the three aspects of motion intelligence, such that knowledge-based motion control and data-driven motion control can be seamlessly integrated, and can continuously improve its motion intelligence without the burden of maintaining a large database and increased local computational efforts. 
+
+% \textbf{Motion Theory} --- the principles and laws that reveal the regularity and variability of human motions;
+
+% 
+
+To illustrate the implementation of our proposed framework, consider a nursing robot learning collaborative manipulation of a  new object from robot-mediated interaction. Before deployed to the new task, the robot has been trained off-line and acquired general motor skills for manipulating robot, such as coordinated reaching and grasping. Using large and general demonstration dataset, the offline training can derive robust computational models for the robot end-effector's reaching motion primitives and frequently grasping hand pre-shapes (i.e., the general motion templates). However, the offline training is not informed of the personalized and/or task-specific needs, such as being deployed as to nursing tasks, the robot should render natural human arm postures in human-robot collaboration. By observing the teleoperator in a new task, the robot will be notice that compared to the reaching motion primitives it has, the movement primitives extracted from the new demonstrations are significantly different at the degree of freedom that measures the arm posture (i.e., the rotation of the elbow with respect to the should-wrist axis, namely the swivel angle~\cite{Tolani_Badler:96}), but are quite similar at the degrees of freedom for end-effector trajectories. Given the similarity and difference, the robot will propose to the teleoperator to perform (1) incremental learning to update motion primitive models for the end-effector trajectories~\cite{hewitt2017dmp}, and (2) forgetting so that the motion template for swivel angle trajectory will be overwritten by the special skill in the specific tasks. By observing how the teleoperator chooses and/adjust a pre-defined hand pre-shape to grasp and manipulate a new object, our proposed framework also creat models for Special Skills such as the correlation between the hand pre-shape and a new objects.  
+ 
+
+
+
+% Similar to the fast adaption of low-level motor skill, our framework can also update the high-level collaborative task affordance, including the 
+
+
+% Building upon these results, it is possible to develop a self-evolving motion intelligence, which can \textbf{acquire} user-specific and customized motor skills based hierarchical motion knowledge and generalized skill sets, can \textbf{reflect} upon its motion knowledge hierarchy to refine its motor skills and improve its learning efficiency.   
+
+
+
+%   which can customize the general motor skills of the 
+
+% incremental and decremental learning
+
+%-------------------------------------------------------------------------
+\subsection{Activity 2 --- Fast intention forecasting and blended control for robotic mediation}\label{sec:plan-intent}
+%-------------------------------------------------------------------------
+{\bf Problem statement:} For interactions between humans and robots in nursing tasks, shared intent is the key to successful collaboration \cite{cite}.
+Thus, the robot must be able to infer the intentions of nurses, teleoperators, and patients, at both the level of motion primitives and at the level of task decompositions and assignments to appropriately mediate the joint task through shared autonomy. In this task, we propose to leverage the knowledge and models we constructed in Activity 1 to provide: (1) intent forecasting through robot mediated demonstrations and (2) shared intent forecasting within a cooperative game formulation. 
+Here, we focus on novice teleoperators and relax the strong coordination and near optimality assumptions employed to learn from expert teleoperators in Activity 1.
+
+{\bf Probabilistic approach: }
+We estimate intended tasks and subtasks from a partial sequence of subtasks $\sigma_{1:t}$ and the (partial) motion primitive $\xi_{t+1}$ currently being executed using Bayes theorem:
+\begin{align}
+& P(D|\xi_{t+1}, \sigma_{1:t}) \propto \sum_{\sigma_{t+1:T}} P(\xi_{t+1}|\sigma_{t+1}) P(\sigma_{1:T}|D) P(D);\\
+& P(\sigma_{t+1}|\xi_{t+1}, \sigma_{1:t}) =
+\sum_{D}\sum_{\sigma_{t+2:T}} P(\sigma_{t+1:T}|\sigma_t,D) P(D|\xi_{t+1}, \sigma_{1:t}).
+\end{align}
+Key quantities for estimating these low-level and high-level are the (partial) motion primitive probability and the high-level conditional task decomposition and assignment.
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 2.1 --- Inverse Reinforcement Learning for Task Decomposition and Role Assignment}\label{sec:plan-intent-Stackelberg}
+%-------------------------------------------------------------------------
+
+\todo{Jane: Given the high-level task structure learned in Activity 1.2, activity 2.1 uses Stackelberg Game Formulation to infer the collaborative task assignments between expert teleoperator and an on-site human nurse. The demonstration task can be human and robot collaboratively organize and clean the patient room. For such a task, activity 2.1 will provide a reward function to optimize the task allocation, particularly for the subtask that both robot and human nurse can do -- such as who is going to pick which object, and who is going to fetch a far-away object --- to optimize task efficiency and accommodate human nurse's preference. }
+
+{\bf Problem Formulation:} Using the space of task decompositions for a given task produced in Activity 1.2, we seek to learn the preferred decomposition and the assignment of the human partner and robot to the sub-tasks of the decomposition.  
+
+\noindent
+{\bf Cooperative Stackelberg Game Formulation:} 
+The nature of collaboration leads us to consider the problem of coordinating behavior using game-theoretic formulations: In this game, two agents collaborately perform some mutually desired task. The observed demonstrations, including the demonstrations of the robots and those of the nurse, is resulted from a solution of the cooperative game, in which both agents act jointly to maximize a performance criteria expressed as a reward function $R: S \times A_1\times A_2 \rightarrow \mathbb{R}$ where $S$ is the world state, $A_1$ and $A_2$ are actions of robot and the nurse, respectively. 
+
+We employ an important simplifying assumption---that the human partner takes a lead role and sub-task selection is coordinated to be consecutive.  This is based on observations that 
+hierarchy and role assignment are often observed in collaborative human teams \cite{mortl2012role,colman2014explaining}. For example, a human nurse may take the leader role and guide the tele-operated robot, or the teleoperator indeed,  towards the goal position when they collaboratively transport a patient bed. Thus, it is meaningful to consider a class of hierarchical game, called cooperative Stackelberg game \cite{basar1999dynamic}, to capture the selection of the particular task decomposition and assignment of roles to subtasks selected by the collaborative pair.
+
+\noindent 
+{\bf Inverse Reinforcement Learning:} We propose to extend inverse reinforcement learning methods \cite{ziebart2008maximum} to learn utilities for the selection of a specific task decomposition and assignment of its subtasks in the cooperative Stackelberg game representation. These learned utilities are estimated to rationalize coordinated behaviors that have been demonstrated.  Following the Stackelberg game representation, we define utilities in terms of the current state and joint actions from all agents. However, these will often be independent sums of each agent's individual utility when employing independent or sensory motion primitives. 
+Under maximum entropy inverse reinforcement learning \cite{ziebart2008maximum}, a particular task decomposition $d$  from language $L$ and assignment $a$ with utility $u(d,a)$ is predicted with probability $e^{u(d,a)}/Z$, where $Z$ is a normalization term over the entire language and possible assignments: $Z = \sum_{d' \in L, a'} e^{u(d',a')}$. This term can be difficult to compute exactly since the language $L$ is often not finite.
+
+
+% \subsubsection{Activity 2.1: Forecasting the intent of motion primitives from robot-mediated demonstrations} 
+% %In this subtask, we examine the question: Is it possible to infer tele-operator's intent from the robot mediated demonstrations? The purpose of inferring teleoperator's intent has two-fold: On one hand,
+% An understanding of motion primitive intent can enable the robot to use blended control \cite{downey2016blending} to ease the effort required from a novice teleoperator to achieve the control objective. For example, in a task of rearranging utensils on a table, with the ideal blending control, the teleoperator maintains control of high-level movements, such as moving the hand towards the cup (\emph{intent}) and when to grasp (\emph{intent}), while the autonomous robot handles the details of this task and performs intuitive, human-like motion using DMPs. This is only possible if the robot knows which object the user intends to pick up. 
+
+% %On the other hand, for the purpose of training novice teleoperators, if we obtain imperfect tele-operation demonstrations, how to infer the underlying intent and aid the novice user? \jie{I think it is important. However, the current method cannot do this.}
+
+% To answer this question, we formulate the problem in IRL setting: the tele-operator has an unknown reward function for which his behavior is assumed to be near optimal. The reward function captures goal-related reward and risk-averse behaviors, as well as other performance criteria such as efforts involved in operating the input devices. 
+% The challenge is that in this IRL problem, we obtain two demonstrations simultaneously: One demonstration $d_h$ is given by the tele-operator using the input device and demonstration $d_r$ is given by the tele-nursing robot. The mapping from $d_h$ to $d_r$ is in general a nonlinear function internalized by the expert. If we simply seperate the demonstrations into $D_h$ and $D_r$, and apply IRL to solve two separate reward functions, we remove the coupling between the reward functions and the unknown mapping. Another approach is to consider a joint reward function $R$ defined over the product state space between the workspace of tele-operator and the workspace of the robot and use IRL algorithm to learn $R$. A potential problem with this approach is that it does not distinguish the performance criteria for tele-operation and the user's preference for tele-operation. To address this, we propose an approach inspired by planning in shared autonomous MDPs \cite{fu2016synthesis}: Consider there are two reward functions $R_h$ and $R_r$, defined over the product state space between the workspace of tele-operator and the workspace of the robot. The behavior of the tele-operated system can be viewed as if the system performs a Pareto-optimal policy that aims to balance maximizing $R_h$ (goal-reaching, smoothness, time-efficiency in tele-operation) and $R_r$ (goal-reaching, safety, efforts in robot maneuvers): A policy is Pareto optimal if there is no other policy that can make it better for one objective than this policy without performance degradation for another
+% objective. Thus, the IRL problem needs to solve (1) reward functions $R_h$ and $R_r$, and (2) a pre-defined weight vector $w_h, w_r$ that pinpoint on solution from the Pareto optimal set. Our approach is illustrated in Fig.~\ref{fig:pareto_irl}, where for a given set of weights, we employ the Chebyshev scalarization method \cite{perny2010finding} to find Pareto-optimal policies. In addition to reward inference, the inference of weights will be treated as a hyperparameter optimization problem using the primal and dual formulation of maximum likelihood estimation in IRL setting \cite{franceschi2017forward}.
+% \begin{wrapfigure}{r}{0.6\textwidth}
+%   \begin{center}
+%     \includegraphics[width=0.58\textwidth]{fig/IRL_game1}
+%   \end{center}
+%   \caption{A block diagram showing the proposed IRL algorithm for intent inference for (1) teleoperator's intent through robot mediated demonstrations (Blue) (2) shared intent between teleoperator and end users for cooperative tasks (Green). Note in (1), the parameters $\theta$ includes a tuple $\theta_h, \theta_r$. }
+%   \label{fig:pareto_irl}
+% \end{wrapfigure}
+% \jie{This figure can be edited here: \url{https://goo.gl/hkyinA}}
+
+% The seperation of two rewards allows us to further consider personalizable tele-operation, as human individual may have different preferences on how to use the input device, characterized by $R_h$, but share a common knowledge on how the robot shall behave, given by $R_r$. Learning $R_h$ will help us to understand how to improve end user's experience. Most importantly it is possible to learn $R_h$ from simulated experiments. \jie{Jane: I am not sure if it is correct. still think about it.}
+
+% \paragraph*{Intent prediction for coordinated tasks with end-users} In this subtask, we focus on the problem of infer the shared intention between human nurse and expert teleoperator. By inferring shared intention, the robot will be equipped with knowledge of how to coordinate its actions or motion plans based on the observed behavior of human nurses. This intent inference largely differs from existing IRL methods: Instead of answering ``what and how the demonstrator intents to do'', the robot aims to answer ``what shall we do together as a team'', by observing a partial demonstration from its interacting human nurse. 
+
+% Is it possible to infer the shared intent, represented by the team reward function $R$, from demonstrations $\mathcal{D}$? Formulated as IRL problem, one possible approach is to substitute the solution by that of cooperative Markov game in Fig.~\ref{fig:pareto_irl}. However, cooperative Markov game with independent decision makers is difficult to solve  due to the coordination problem \cite{fulda2007predicting}. \todo{replace this ref if better one can be found.}
+
+\jie{here is a preliminary draft. I think if we have task completion, the nature should be multi-objective.}
+\paragraph*{IRL in multi-objective Stackelberg game}
+The task assignments in collaborative teleoperated robot and
+nurse team can be formulated as a Markov game $M=(S, A_1\times
+A_2, P, R, F)$ where $S$ is a set of states, each including the joint
+state of all agents and an auxierary task-related
+state. The set $F\subseteq S$ is a set of \emph{task completion}
+states: the task is completed only if a state in $F$ is reached. For
+example, in collaborative pick-and-place of multiple utensils,
+the task completion state is reached only when all objects are
+collected.  The reward function $R$ specifies the \emph{unknown
+end user's preference} of task completion, which determines a
+policy for task assignment in collaboration. To ease the end
+user's effort, the robot needs to infer user's preference and
+assist the task completion. To this end, we propose the
+stackelberg game formulation for IRL where the end user performs
+the role of a leader and the robot performs the role of a
+follower: When the end user decides his policy, he will safely
+assume that the robot (follower) will pick a best response policy
+in collaboration to the proposed leader policy. In parallel to the hierarchy in role assignments, this  by nature multi-objective: Maximizing the
+end user's reward $R$ while ensuring overall (time or energy)
+efficient task completion. Hence, we propose to incorporate
+Pareto-optimal solutions in multi-objective cooperative
+Stackelberg equilbrium: A policy is Pareto optimal if there is no
+other policy that can make it better for one objective than this
+policy without performance degradation for another objective.  Given that we know
+the task completion reward, the IRL problem needs to solve (1)
+reward functions $R$ that encodes the preference of the end user,
+and (2) a pre-defined weight vector $w$ that pinpoint on solution
+from the Pareto optimal set. We plan to extend our previous work on Pareto-optimal planning in Markov decision process for shared autonomy systems \cite{fu2016synthesis} to cooperative Stackelberg game for solving the inner problem in IRL. Further, to ensure a uniform spread of Pareto-optimal solutions given a uniform spread of weight vectors,  Chebyshev
+scalarization scheme \cite{perny2010finding} will be introduced in solving  Pareto-optimal policies in multi-objective
+cooperative Stackelberg game. The inference of weights will be posed as a hyperparameter optimization problem using the primal
+and dual formulation of maximum likelihood estimation in IRL
+setting. 
+\begin{wrapfigure}{r}{0.6\textwidth}
+  \begin{center}
+    \includegraphics[width=0.58\textwidth]{fig/IRL_game}
+  \end{center}
+  \caption{A block diagram showing the proposed IRL algorithm for intent inference for  end users for collaborative task assignment. $\theta$ is the parameters in the unknown reward function. }
+  \end{wrapfigure}
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 2.2 --- Real-time Motion Prediction and Action Recognization}\label{sec:plan-intent-prediction}
+%-------------------------------------------------------------------------
+\todo{Jane: following the framework of Wang, Zhikun, Katharina Mülling, Marc Peter Deisenroth, Heni Ben Amor, David Vogt, Bernhard Schölkopf, and Jan Peters. "Probabilistic movement modeling for intention inference in human–robot interaction." The International Journal of Robotics Research 32, no. 7 (2013): 841-858, propose a framework that predict interactive goals bounded by joint reward functions and joint action affordance constraints}
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 2.3 --- Inverse Reinforcement Learning for Reward in coordination of navigation and manipulation}\label{sec:plan-intent-SharedAutonomousCoordiantion}
+%-------------------------------------------------------------------------
+% Goal: Develop a user assistive module for controlling the coordinated motion of mobile humanoid nursing robot
+
+\todo{Jane: This activity aims to use IRL to learn a reward function from an expert teleoperator for how to autonomously move the mobile based to facilitate the manipulation being performed (a typical IRL problem). This reward function may tradeoff among manipulability, clearance to obstacle, vision advantage, minimal intervention to reduce energy cost, alignment with the pushing direction. This activity leads to a user assistive module that allow a novice user focus on control of hands. The novice teleopertor can simply click a button and the base will be moved autonomously.}. 
+
+This sub-task aims to develop a user assistive module for autonomously moving the mobile base in coordination with the manipulation motions under a novice teleoperator's direct control. Our previous system evaluation has demonstrated that direct teleoperation of a mobile humanoid nursing robot with many DOFs demands a lot of physical and mental efforts. A teleoperator has to switch among the control of different robotic components (arms, hands, mobile base, etc). However, input devices that only allow simultaneous control of limited number of DOFs, such as Geomagic Touch or gamepad, are still preferred over whole-body exoskeleton for their costs, and over the whole-body motion capture for the motion control accuracy. Thus, we propose to develop a shared-autnomous module to reduce the teleoperator's control efforts. Our user assistive module is built upon (1) the collaborative task knowledge and motion skills the robot has learned in Activity 1, and (2) the robot's capability of user intent inference developed in Activity 2.  
+
+To illustrate the function of the proposed assitive module, consider the task of a nursing robot and human nurse collaborative moving a patient transfer bed in a cluttered patient room. This task requires (1) coordinating the mobile base with the robot hands that grasp and push the patient transfer bed, and (2) coordinating nursing robot motion with the human nurse that lead the moving direction. In this collaboration, the assitive module assumes: The human nurse has more task experience and perception/motion capability and thus will lead the task; The novice user has enough knowledge of the high-level task goal (i.e., move the patient bed from point A to point B, avoid collision with environment), yet the novice user is unfamiliar with the mapping from the input device to the nursing robot, and thus cannot control motion accurately. With this assumption, the assistive module will make a tentative and conservative task division between the teleoperator and nursing robot, such as the teleoperator moves the nursing robot's end-effectors close to where he/she intends to grasp, while the robot will perform low-level vision-based motion planning to reach to grasp at the appropriate positions on the patient transfer bed. As the teleoperator controls the robot's hands to reach to grasp, the assistive module will determine whether and how to move the mobile base to the reachable distance. After the robot's hands have grasped, the assistive module will further utilized the kinematic redundancy of the robot arm to adjust the mobile base without affecting the grasping hands. This adjustment aims to optimize the weighted reward function learned in Activity 1, which addresses the robot manipulatibility for pushing the patient bed, the clearance in the cluttered environment, and the advantages of camera vision. After both human and robot confirm their grasping, the assistive modual will be plan the mobile base in consistent with the moving direction the human nurse intends towards. When navigate in a cluttered patient room, both the human nurse and nursing robot needs to stop freqently and adjust where they stand and where their hands grasp. Based on where the human nurse grasps, the robot will utilize its knowledge of collaborative task decomposition to suggest the appropriate grasping region on the patient transfer bed to the novice teleoperator. As the teleoperator starts moving, the assistive module will determine where the novice aims to grasp based on the commanded motion direction and use the learned motion primitives to plan the reaching-to-grasp motion. 
+
+% \zhi{I will add learning inter-dependency of teleoperator and user's intent, using Bayesian network from demonstrated robot-mediated interaction}
+
+% \paragraph*{Learning teleoperation intent}
+
+% \zhi{Learning complex motion intent conveyed by the teleopertor's operation of input devices}
+
+% (1) teleoperation primitives; (2) Autonomous segmentation and classification; (3) learning correlation between teleoperator's action to manipulation effects 
+
+% \jie{Whatever you plan to write in this part, could potentially fits with the first subtask in task 2. Is it possible to merge? Also the current subtask 2.1 may need a bit more concrete details on what do we mean by talking about state and actions in IRL.}
+%-------------------------------------------------------------------------
+\subsubsection{Activity 2.4 --- Active intent detection for assisting novice user in collaborative manipulation}\label{sec:plan-intent-ActiveIntent}
+%-------------------------------------------------------------------------
+This sub-task aims to develop a user assistive module to assist novice teleoperation in dexterous manipulation tasks in collaboration with the human nurse. Here we consider the nursing task of collaboratively clearning patient room, which involves: removing the dirty beddings and clothings from the patient bed, and removing patient rooms debris such as suction and urine containers. In this collaboration, the human nurse is responsible for intimate physical human robot interactions (e.g., taking off the dirty clothing from the patient body), and manipulations that requires fine motor skills (e.g., removing suction container from the suction system). The robot is responsible for collecting or disposing objects the nurse hand over or leave to it. Under this task scope, we illustrate the function of the assistive module in two typical scenarios: \textit{Cooperative Mode} --- The robot takes and places the object handed over by the human nurse; and \textit{Collaborative Mode} --- The robot and nurse need to pick and place a collection of objects. 
+
+\paragraph*{Cooperative mode} In the first scenario, the human nurse and nursing cooperatively manipulate a shared object. When taking an object from the human nurse, the assistive module will utilize the knowledge of shared object affordance and automatically identify where the robot should grasp given where the human nurse has grasped. The robot will also use the learned interactive motion primitives to predict human partner's motion and plan its responding motion. 
+
+\paragraph*{Collaborative mode} In this scenario, the robot and nurse need to collaboratively pick and place a collection of objects. Although the human nurse and nursing robot do not manipulate shared object, yet their choice of the objects to manipulate affect each other's task-sharing. Thus, The assistive module will first suggest to the novice teleoperator which objects the robot can handle given its physical capbilities. From camera view, the assistive module will extract these objects and their affordance features, and mark where the teleoperator can pontential operate in an augmented camera view. Before the teleoperator starts moving, the assistive module initlizes an prioritize all the operatable objects by their distance to the robot hands. As the teleoperator starts to move the robot, the assitive module adjust the probability estimation to narrow the object the teleoperator intends to manipulate, and provide weak but sensible guiding force to assist the teleoperator to reach to grasp the object with highest probability. At this moment, the assistive module is still uncertain about the teleoperator's intent, but will use the teleoperator's reaction to the guiding force for resolve the ambiguity of intent. For example, after observing the teleoperator motion direction, the assistive module can not judge if the teleoperator's motion intent is grasping the cup or the soft ball sitting very close it. To resolve the ambiguity, the assistive module will guide the teleoperator towards the softball. The teleoperator will accepts this suggestion if it is a correct guess, or it is an acceptable move that doesn't affect the task performance or high-level plan. If no strong reaction is observed, the assistive module will increase the assistive force and plan low-level grasping motion. If the teleoperator acts against the small assistive force, the assistive module will revise the probabilistic estimation of user intent, and switch to guide the teleoperator to operate on the ball. It will keep suggesting operations on the objects and their affordance features in the direction the teleoperator move towards, if the teleoperator keeps acting against its previous suggestion. For the objects that human nurse intervenes to handle, the assistive module will remove it from the robot's object queue. The proposed online intent inference is computational feasible, since the number of objects and their affordance features are limited. This assitive strategy is developed based on the assumption that human teleoperators are not sensitive to optimal behavior: they are fast in re-planning and are very quick and flexible to switch among policies of satisfactory and/or equivalent effect and performance. As long as satisfactory task performance can be achieved, human prefers to act out of convenience, habits, and comfort, instead of pursuing optimality at large cost and efforts. 
+
+% \todo{Jane: This activity aims to learn a reward function from an expert teleoperator for how to autonomously move the mobile based to facilitate the manipulation being performed (a typical IRL problem). This reward function may tradeoff among manipulability, clearance to obstacle, vision advantage, minimal intervention to reduce energy cost, alignment with the pushing direction. This activity leads to a user assistive module that allow a novice user focus on control of hands. The novice teleopertor can simply click a button and the base will be moved autonomously}. 
+
+%-------------------------------------------------------------------------
+\subsection{Activity 3 --- Developing intelligent shared-autonomous control modules to assist novice teleoperators in dexterous motion coordination and robot-mediated coordination}\label{sec:plan-evaluation}
+%-------------------------------------------------------------------------
+\noindent
+Goals: \textbf{Develop intelligent share-autonomous moduals to assist novice teleopertors to perform nursing tasks that involves (1) the coordination of dexterous manipulation and navigation, and (2) dexterous manipulation in collaboration with human patient and/or nurse; Implement the user assistive modual on the Tele-robotic Intelligent Nursing Assistant (TRINA) system; Validate the usability and efficacy of developed motion intelligence via user study. }
+
+\begin{wrapfigure}{r}{3.0in}
+\centering
+% \vspace{-1em}
+\vspace{-1mm}
+  \mbox{
+  \includegraphics[width=1.0\linewidth]{fig//vive-baxter.jpg}
+  }
+\caption{(a) Visualization of Baxter workspace from Microsoft Kinect Camera to HTC Vive; (b) Operator holding HTC Vive controller slowly moves his hand from neutral position; (c) trainer moves robot hand manually to follow human trajectory; and (d) Baxter reaching the same configuration as human operator.}
+\label{fig:vive}
+\end{wrapfigure}
+
+
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 3.1 --- Implementation}\label{sec:plan-evaluation-implementation}
+%-------------------------------------------------------------------------
+\noindent
+
+
+\paragraph*{Prepare and Serve food}
+
+(1) Task description
+
+(2) Method required 
+
+- Learning abstract task structure
+
+- Learning motion primitives
+
+- Human-robot handing over - action recognition + real-time motion prediction 
+
+\paragraph*{Moving patient bed}
+ 
+(1) Task description  
+
+(2) Method required  
+
+- Learning abstract task structure
+
+- Learning motion primitives
+
+- Learning collaboration goal using bayesian framework
+
+Grasping - Given where the human nurse grasp on the bed, where the robot should grasp on the shared object
+
+Collaborative Moving - Follow the moving direction guided by the human nurse
+
+Learn joint action affordance; Learn robot task-goal constrained by shared object goal state and human partner's action
+
+- Learning expert teleoperator intent --- an reward function for whole-body motion coordination, to assist novice teleoperator to  move mobile automatically to facilitate manipulation 
+
+
+\paragraph*{Organizing and cleaning patient room}
+
+- Learning abstract task structure
+
+- Learning motion primitives
+
+- Learning collaborative task decomposition (Stackburg)
+
+Collaborative object organization - Learn to match user preference to object affordance features
+
+Expert teleoperator's preference - which objects the teleoperator prefer to sort given the robot's limited physical capability
+
+Expert nurses preference - which objects the nurse prefer to sort given its superior capability and concern of safety
+
+- Motion prediction and action recognization based on inferring Human nurse's intent
+
+- Active intent detection
+
+Compensate for inaccurate motion of novice user - interactive intent detection
+
+% Although it is possible to map the teleoperator's whole-body motion to using a motion capture system or exoskeleton, 
+
+% user interface,     
+
+% Our mobile base motion control strategy is concerned of (1) facilitating the manipulation tasks being performed, and (2) behaving appropriately in human environment and to human partners. Here we apply the low-level coordinated motor skills and high-level task knowledge developed in Task 1, to assist novice teleoperator in the task of nursing tasks such as collaborative moving a patient transfer bed. 
+
+% % Investigate the high-level strategies for coordination of mobile manipulator systems that consists of hierarchical macro- and micro-structures.
+
+% social focal point (equilibrium - navigation in human environment)
+
+
+% \paragraph*{Problem Formulation} 
+
+% 	* When and how to move the mobile base (in relation to hybrid system theory, region of attractions in each stable mode (mobile base navigation control and manipulator control)).
+% 	* Coordination of macro- and micro-structure
+% 	* Related work on mobile manipulator, and micro-/macro-structure coordination
+
+
+
+% Given that human nurse is superior in perception and motion capability, it is very possible that the human nurse will finish their preferred and manageable task 
+
+
+% As the collaboration goes on, fewer objects will be left for pick and place. These objects are left for human nurse is unwilling to handle it, or needs the nursing robot's help for operation. In this case, the robot will add the remaining object to when its priority-based task queue is empty. The robot will first attempts  
+
+% In this collaborative task, the human nurse is responsible for intimate physical human robot interactions (e.g., taking off the dirty clothing from the patient body), and manipulations that requires fine motor skills (e.g., removing suction container from the suction system). The robot is responsible for collecting or disposing objects the nurse leaves behind or hand over to it. 
+
+% 
+
+% \paragraph*{Collaborative mode} In the first scenario, 
+
+ 
+
+% \paragraph*{Cooperative mode} In the second scenario, the human nurse and nursing cooperatively manipulate a shared object. Thus, the assistive module will shared object affordance, automatically identify where the robot should grasp given where the human nurse has grasped on the object being handed over. 
+
+
+
+% In case of ambiguity, the teleoperation system takes the implicit judgment from the teleoperator expressed in teleoperator's subtle reaction.   
+
+
+% a hierachical data structure which prioritizes the operatable objects by their distance to the robot hands, and prioritizes an object affordance feature by the easiness of the operation. 
+
+
+
+%  for 
+
+% probabilistic model 
+
+% of where what and where the teleoperator may potentially operate on. 
+
+
+% From the robot-mediated collaboration demonstrated by the on-site human nurse and expert teleoperator, the robot has learned the (shared) object affordance. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% based on interactive motion intent inference. Exploit knowledge of task affordance and multi-agent interaction modeling to improve the fluency coordinated and collaborative manipulation.
+
+
+
+% \paragraph*{Vocabulary and Semantics for complex motion intent}
+
+% \paragraph*{Non-intrusive manipulation assistance based on interactive intent inference and task affordance learning} 
+
+ 
+% We propose a scenario that a novice teleoperator control a tele-nursing robot with an end user whose at least more capable in motion than the teleoperated robot; In this case, the human end user (either a human nurse or a patient that is still capable to move) will take the lead in human-robot interaction.  
+
+% The teleoperator's operation is closely associated to the task/object affordance, and in response to the end user's motion. 
+
+% As a result, the teleoperation system will infer the human teleoperator's motion intent, based on the learned object/task affordance, as well as the end user's motions
+
+
+
+
+%-------------------------------------------------------------------------
+\subsubsection{Activity 3.2 --- User study and evaluation metrics}\label{sec:plan-implementation-userstudy}
+%-------------------------------------------------------------------------
+The proposed research involves human subjects in both robot learning and system evaluation. Given the nursing tasks shown in~\fig{Tasks}, we will first teach experienced nurses to control the nursing robot in direct teleoperation, and then collect their robot-mediated collaborations with their human partners in a simulated patient room. To record the nurses' learning curve, we will repeat the cycle of teleoperation training and task performing, until the nurse under training can successfully teleoperate the robot to finish the collaborative task. For system evaluation, we will teach experienced nurses new to the nursing robot to learn to control the robot with the developed assistive modules, and perform the same set of collaborative nursing tasks. We compare the learning curve of the teleoperator nurses with and without the assistive modules, to validate effects of robot learning.
+
+In our user study, objective metrics such as task completion time and success rate will be used to measure whether the proposed method improves task performance, while subjective user experience questions will evaluate whether the robot's motions are natural enough to the operator and end users. After performing demonstration task, both the teleoperator and on-site human partner will evaluate their user experience using the NASA Task Load Index (NASA-TLX), which measures the physical, mental, and temporal demands as well as effort and frustration. To evaluate whether the arm motion coordination is natural to human users, the subjects will further answer survey questions, such as: (1) Does the autonomous motion coordination comply with the manipulation they intend to perform? (2) Does the robot adapt quickly to their preference of task operation? (3) Does the robot behaves naturally to the on-site human partner? (4) Do the assistive modules facilitate them learning the motion correspondence between the robot and operator, and therefore reduce operator training effort? 
+
+The subjects will also report their preference for the assistance provided by different levels of autonomous control. Under shared autonomy, do human operators/end users prefer more or less dominance in control? Are their preferences task-dependent (e.g., depending on whether the operation involves intimate human-robot interactions), skill-dependent (e.g., depending on their experience with computers, video games or nursing experience), or scenario-dependent (e.g., whether the operator needs to be engaged with the end user in communication, attention and emotion)? In a previous user study, the PI has observed preferences for both more and less dominance of the operator in shared autonomous control. On one hand, more direct control over the robot may be preferred because the operator and/or end user have a plan in mind for the manipulation particularly for sequential tasks. The robots are neither able to work out a better plan nor able to infer their intention well. On the other hand, more supervisory control is favored in the scenarios where engaged communication was as important as the operation being performed, such as in patient care. 
+
+% Many collaborative nursing tasks, such as removing a heavy blanket from patient
+
+% The developed motion intelligence can be applied to autonomous navigation strategy that facilitates the manipulation tasks under direct teleoperation, and provide adaptive assistance to novice user in dexterous manipulation tasks. 
+
+
+
+% More evaluating the capability of the developed motion intelligence, our implementation and user study on TRINA system aims to provide a paradigm that can improve the adaptability via the practice of robot-mediated collaboration.
+
+% %-------------------------------------------------------------------------
+% \subsubsection{Benchmark}\label{sec:plan-implementation-userstudy}
+% %-------------------------------------------------------------------------
+
+%-----------------------------------------------------------------
+\section{Collaboration plan}
+%----------------------------------------------------------------
+
+% an old template 
+
+This project will be carried out by the PIs and three Ph.D. students.  The experimental validation will involve
+undergraduate students through summer interns or senior design
+projects. The anticipated schedule for the major tasks is shown in
+Fig.~\ref{fig:timeline}.\vspace{-2ex}
+\begin{wrapfigure}{r}{0.45\textwidth}
+\begin{center}
+\noindent\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}[x=.5cm, y=0cm]
+\begin{ganttchart}[y unit title=0.3cm,
+y unit chart=0.4cm, vgrid, title/.style={fill=black!60, draw=none},
+title label font=\color{white}\bfseries \small,
+hgrid, % title label font = \small, title height=.8,
+bar label font=\small, 
+bar label node/.append style=%
+{align=left},
+milestone height = 0.15mm,
+milestone/.append style={fill=blue!80}, 
+%  milestone label node/.append style={anchor=south}, 
+milestone label font = \small\bfseries,
+group label font =\small\bfseries\color{blue}, bar height=.4, bar
+group/.append style={draw=black, fill=blue!20},]{1}{12}
+\gantttitle{Year-1}{4} \gantttitle{Year-2}{4}\gantttitle{Year-3}{4} \\
+\ganttgroup[name=task1]{Task 1}{1}{6}\\
+\ganttbar[name=data]{Data collection and segmentation}{1}{8}\\
+\ganttbar[name=dmpLearn]{Learning DMP}{1}{4}\\
+\ganttbar[name=taskLearn]{Learning task constraints and dependency}{3}{6}\\
+\ganttbar[name=adaptation]{Refinement and adaptation}{4}{6}
+\ganttmilestone{Milestone: Task 1}{6} \\
+\ganttgroup{Task 2}{1}{8}\\
+\ganttbar[name=irlGame]{Inference of shared intent}{1}{3}\\
+\ganttbar[name=intentDetect]{Goal-directed intent detection}{3}{6}\\
+\ganttbar[name=motionPredict]{Motion prediction and action recognition}{6}{8}
+\ganttmilestone{Milestone: Task 2}{8} \\
+\ganttgroup{Task 3}{4}{12}\\
+\ganttbar[name=experiment]{Evaluation}{4}{12}\\
+\ganttbar[name=nav]{Developing navigation assistance}{6}{8}\\
+\ganttbar[name=manipulation]{Developing  manipulation assistance}{6}{10}\\
+\ganttbar[name=userStudy]{User study}{1}{12}
+% \ganttlink{intentDetect}{nav}
+% \ganttlink{taskLearn}{nav}
+% \ganttlink{dmpLearn}{manipulation}\
+% \ganttlink{irlGame}{manipulation}
+% \ganttlink{intentDetect}{manipulation}
+ \end{ganttchart}
+ \end{tikzpicture}
+ }
+ \end{center} \vspace{-4ex}
+\caption{\small Project Timeline.\label{fig:timeline}}
+ \vspace{-2ex}
+\end{wrapfigure} 
+
+
+%-------------------------------------------------------------------------
+\section{Broader Impacts of the Proposed Work}\label{sec:impact}
+%-------------------------------------------------------------------------
+
+% Broader impacts may be accomplished through the research itself, through the activities that are directly related to specific research projects, or through activities that are supported by, but are complementary to, the project. NSF values the advancement of scientific knowledge and activities that contribute to achievement of societally relevant outcomes. Such outcomes include, but are not limited to: full participation of women, persons with disabilities, and underrepresented minorities in science, technology, engineering, and mathematics (STEM); improved STEM education and educator development at any level; increased public scientific literacy and public engagement with science and technology; improved well-being of individuals in society; development of a diverse, globally competitive STEM workforce; increased partnerships between academia, industry, and others; improved national security; increased economic competitiveness of the United States; and enhanced infrastructure for research and education.
+
+\paragraph*{Broader Technological and Societal Impacts} 
+
+This project envisions broader impacts on  ... 
+% This project envisions broader impacts on rehabilitation, assistance exoskeletons and prosthetic upper limbs that are expected to render human-like motions. For instance, our proposed motion control method can enable robotic exoskeletons to be more transparent to healthy operators, and to correct abnormal joint coordinations resulting from motor disabilities. The proposed project will also benefit a wide range of arm-like robotic manipulator robots for medical, industrial and military-relevant tasks, such as redundant manipulators for minimally-invasive surgery, humanoids for manufacturing and maintenance, and mobile manipulators for explosive ordnance disposal. Our research effort aims to remove two major barriers that prevent robot merging into human society as capable and socially acceptable peers: robots should be able to \textit{move like humans} and \textit{work with human-level motor skills}. Results from investigating human-inspired robotic motion control also help validate our understanding of human motion control, and therefore have broader impact on the training and recovery of human motor skills. By improving the usability of dexterous robotic manipulators under direct teleoperation and shared-autonomous control, this project may also lead to improved availability of healthcare and industrial labor, and provide surrogates for military and medical personnel for tedious, repetitive, and dangerous tasks. It also aims to enable the creation of more human-like and human-friendly robots for hospital and home care that can provide long-term assistance to aging and disabled populations.
+
+
+\paragraph*{Integrating Research with Education} 
+
+The proposed research will be integrated with undergraduate and graduate course offered by the WPI robotics engineering program (RBE). The humanoid nursing robot will serve as infrastructure for both research and education. In Fall 2017, the PI will begin teaching an innovative course (Synergy of Human and Robotic Systems) on the design and motion control of human-compatible and human-like robots. This course is currently offered as a robotics engineering course, and will be extended as cross-curricular course for both robotics engineering and mechanical engineering. Students will actively participate in the research via their course projects. Toward the goals of the proposed research, the PI is also advising three Major Qualifying Project (MQP) teams working on humanoid manufacturing/nursing robots in the 2017-2018 academic year. These MQP projects include: (1) arm-hand and bimanual coordination of a humanoid robot for shoe-sewing tasks, (2) human-inspired design and motion control of multi-fingered grippers for dexterous manipulation, and (3) developing an intuitive motion control interface to reduce the training effort of novice teleoperators. The MQP project on the humanoid manufacturing robot has received industrial funding and hardware support from New Balance. Further support for graduate-level research will be considered based on the outcome of the MQP.
+
+% This project aims to achieve broader technology impacts and contribute to innovative education, outreach and diversity activities: 
+
+
+% It can also be applied to maintenance which need to perform precise and dexterous manipulation, and service and assistive robots which are expected to . 
+
+
+% By investigating human-inspired robotic motion control, it promotes the synergy of robots and human. 
+
+\paragraph*{Diversity and Outreach Activities}
+Beside education activities at WPI, this research will engage research and teaching faculty and students from the nursing school of Worcester State University, and promote education around tele-robotic approaches for healthcare. It aims to encourage woman students in the nursing school to actively participate in the development of the humanoid nursing robot by providing valuable insights and experience from their nursing education and practice. It will also prepare students of the nursing school for a new generation of medical robotic technologies that will be widely available in near future. To promote K-12 education, the humanoid nursing robot will be offered as an educational platform through WPI First Robotics Competition, and will be open to the general public at the WPI TouchTomorrow robotic event. The PI's lab will reach out to local underprivileged high schools and organize free robotics workshops and open lab events for their students. This research will also contribute to the Robotics Education program between WPI and the Worldbank for Sub-Saharan Africa, to promote STEM practice and engagement amongst high school students using robotics. 
+
+\paragraph*{Broader Dissemination}
+This research will produce academic journal and conference publications, as well as mathematical human motion models, human motion data and software packages released on the World Wide Web. Software packages that implement the proposed motion control methods will be developed for compatibility with Robot
+Operating System (ROS), OpenRave and Open Motion Planning Library (OMPL). Based on the research, the PI plans to organize a workshop at an international robotics conference (IROS or EMBC) on human-inspired design and motion control. Course Materials (lecture notes, homework, project design, etc.) based on the proposed research will also be shared on the PI's research website. Overall, this research will improve the well-being of individuals in society, contribute to the development of a diverse, globally competitive STEM workforce, and increase economic competitiveness of the United States.
+
+% In 2017 Fall, the PI will teach a graduate course of synergy of human and robotic systems at WPI. This course covers the design and motion control of human-compatible and human-like robots, and will include the proposed Task 1 and 2 as course projects. Two Major Qualifying Project (MQP) teams the PI advises in 2017-2018 academic year will work on vision-based shared-autonomous control of a humanoid manufacturing robot, and the design and motion control of a dexterous robotic hand for precise manipulation. This research will actively engage K-12 students through WPI robotic events open to the general public, such as TouchTomorrow and FirstRobotics Competition. 
+
+%-------------------------------------------------------------------------
+\section{Results from Previous NSF Support}\label{sec:priorNSF}
+%-------------------------------------------------------------------------
+
+PI Zhi Li has not received prior NSF support.
+
+\textbf{B. Ziebart} was a sub-contractee on NRI-\#1227495 (\$509,409,
+10/2012-9/2017),``Collaborative Research:
+Purposeful Prediction: Co-robot Interaction via Understanding Intent
+and Goals,'' PI on RI-\#1526379 (\$500,000, 09/2015-8/2018),
+``Robust Optimization of Loss Functions with Application to
+Active Learning'') and PI on III-\#1514126 (\$636,454, 09/2015-08/2018)
+``Collaborative Research: Computational tools for extracting individual,
+dyadic, and network behavior from remotely sensed data.''
+The {\bf Intellectual Merits} for these awards include: the
+creation of a framework enabling robots to anticipate and adapt to the
+activities of their human co-workers (NRI); developing techniques that
+better align learning objectives with application performance measures
+in classification settings (RI);
+and developing methods for making sense of massive amounts of social animal
+sensor data (III).
+The {\bf Broader Impacts}
+include the significant efficiency improvements in small- and
+medium-scale manufacturing that these improved interaction technologies
+will facilitate (NRI); improving the application of machine learning to a
+range of domains with non-convex loss measures
+(RI); and effectively multiplying the expertise
+of field biologists when interpreting sensor data (III).
+To date, these projects have produced
+a total of ten conference publications and six workshop publications
+covering the topics of
+inverse optimal control \cite{asif2013inferring,monfort2013predictive,
+byravan2014layered,monfort2015intent,chen2015predictive,
+byravan2015graph,monfort2015softstar,chen2015imitation,chen2016adversarial},
+learning under covariate shift/active learning
+\cite{liu2014robust,liu2015shift,behpour2015addressing,chen2016robust},
+inductively optimizing multivariate losses \cite{wang2015adversarial},
+sequence prediction \cite{li2016adversarial}, and learning to interact
+\cite{behpour2015minimax}.
+
+\textbf{J. Fu} is the Co-PI of
+\underline{CMMI-1728412}: \textbf{Intelligent Soft Robot Mobility in
+  the Real World,} (PI: C. Onal, $200,000$ for Co-PI J. Fu, 08/15/2017
+- 07/31/2020). \textbf{Intellectual Merit:} The proposed research will
+advance soft robot intelligence and mobility in uncertain real-world
+environments that cannot be safety traversed using rigid robotic
+systems.  \textbf{Broader Impact:} This research will pave the way for
+soft robots to be utilized at farms, homes, manufacturing sites, and
+search and rescue scenarios. It will have impacts on education in
+robotics.
+
+% %-------------------------------------------------------------------------
+% \section*{APPENDIX}
+% %-------------------------------------------------------------------------
+
+% Appendixes should appear before the acknowledgment.
+
+% %-------------------------------------------------------------------------
+% \section*{ACKNOWLEDGMENT}
+% %-------------------------------------------------------------------------
+
+\pagebreak
+\setcounter{page}{1}
+\bibliographystyle{IEEEtran}
+\bibliography{./ref,./jieref}
+
+% \pagenumbering{1}
+% \begin{thebibliography}{99}
+
+% \bibitem{Hauser_Li_Trina:17} Li, Zhi, Peter Moran, Qingyuan Dong, Ryan J. Shaw, and Kris Hauser. "Development of a Tele-Nursing Mobile Manipulator for Remote Care-giving in Quarantine Areas." In IEEE Int. Conf. Robotics and Automation. 2017.
+
+% \bibitem{Hauser_Li_Bidirectional:17} Li, Jianqiao, Zhi Li, and Kris Hauser. "A Study of Bidirectionally Telepresent Tele-action During Robot-Mediated Handover." In IEEE Int. Conf. Robotics and Automation. 2017.
+% \end{thebibliography}
+
+% \pagebreak
+% \setcounter{page}{1}
+% \section*{List of Abbreviations, Acronyms, and Symbols}
+
+% \pagebreak
+% \setcounter{page}{1}
+% \input{Summary.tex}
+
+
+\end{document}

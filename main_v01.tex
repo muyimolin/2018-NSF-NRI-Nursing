@@ -1,0 +1,192 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{soul}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{pgfgantt}
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage[compact]{titlesec}
+
+\usepackage{color}
+
+%%===========
+
+%\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}                                                      %%
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+\renewcommand{\refname}{References Cited}                              %%
+\bibliographystyle{plain}                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\captionfont}{\slshape\small}
+
+
+\begin{document}
+
+\begin{center}
+    {\bf Intelligent Mediating Robot: Fast Learning and Adaptation in Simultaneous Interaction with Teleoperators and End-users}
+\end{center}
+
+
+\setlength{\parskip}{1mm}
+\setlength{\parindent}{0em}
+\vspace{-0.2cm}
+
+\todo{NRI Due: Feb 20}
+This project aims to endow mobile manipulator nursing robots with the intelligence to navigate in cluttered human environments and perform a wide variety of dexterous manipulation tasks with minimal human control. Our key idea is to achieve fast, contextual robot learning and adaption through simultaneous multi-lateral physical human-robot interactions. In such scenarios, the nursing robot participates in a patient-caring task, while learning when and how to intervene from the robot-mediated collaboration between its remote teleoperator and on-site human partners. By observing human experts, the nursing robot will also establish hierarchical knowledge of natural coordinated human motions and human-human interactions, and metrics for evaluating task performance and the motion capabilities. Such motion knowledge and metrics will be used to evaluate the level of skills of novice teleoperators, patients and partner nurses, and adjust the level of assistance to be provided to maintain the nursing task performance and the fluency of human-robot collaboration. Our proposed method is unique for it develops the robot motion intelligence in a multi-agent, highly-interactive context. It simultaneously engages the robot learners with human teachers from all the task-relevant perspectives, so that the robot can learn how to behave appropriately given the collaborative task goal and other agents' capabilities and constraints. It also integrates online task learning seamlessly with high-quality task practice, and provides a scheme for evolve the nursing robot from direct control to shared and assured autonomy. 
+
+
+{\bf Intellectual Merit:}
+
+
+{\bf Broader Impacts:}
+
+\newpage
+
+\section{Introduction and Objectives}
+
+Navigation
+
+Manipulation
+
+Object hand over
+
+\subsection*{Summary of research project objectives}
+
+\begin{enumerate}
+    \item ...
+\end{enumerate}
+
+\section{Background and Related Work}
+
+
+\subsection*{Nursing robotics and teleoperation}
+
+\subsection*{Motion coordination of mobile manipulator}
+
+\subsection*{Fluent physical robot-mediated collaboration}
+
+\subsection*{Inverse reinforcement learning}
+
+% \subsection*{Nursing robotics and teleoperation}
+
+% \subsection*{Dynamic motion primitives}
+
+% \subsection*{Inverse reinforcement learning}
+
+Kernel: co-active learning
+
+\section{Research Questions and Guiding Hypotheses}
+
+
+* Task 1 - Learning fluent multi-lateral robot-mediated collaboration from demonstration
+
+* Demo 1 - Human nurse hand-over object to patient
+
+	* Learning object/task affordance
+	* Learning the phase matching in human-human interaction
+	* Learning how the human nurse adapt to the patients with limited motor capability 
+* Demo 2 - Expert teleoperator and human nurse perform robot-mediated collaborative task
+
+	* Human nurse leads the task
+	* Learning from teleoperator's responsive motion to the end user 
+	* Robot controlled by the teleoperator can learn from the teleoperator the feasible and appropriate operation given the robot's limited physical capability and teleoperation transparency
+	* Teleoperator can communicate with human nurse on-site tof negotiate via bidirectional telepresence
+
+		* Teleoperator who can not precisely perceive the spatial and temporal information of the task from inconvenient and/or insufficient camera view
+		* The teleoperator can receive feedback in terms of verbal critique and gestures from the end user
+		* The bilateral communication between teleoperator and end user can compensate the lack of information and correct the motion errors due to mis-perception
+
+
+
+% Provide subtle assistance
+
+% Task 1 --- Autonomous Navigation among people, and based on the need of manipulation tasks
+
+% Task 2 --- Observe the teleoperator for manipulation and appropriately share autonomy between operator and robot (autonomous detecting grasping points based on RGBD camera --- can integrate off-the-shelf software packages; may compare intuitive input devices? )
+
+% Task 3 --- Observe interaction between human nurse and patients to support object handover
+
+
+{\bf Question 1. }
+
+\noindent
+{\bf Key insight:}
+
+\noindent
+{\bf Hypothesis 1.}
+
+--- object handover by inferring proportion of completion of reaching movement
+
+\section{Framework for Mediated Teleoperation}
+
+\section{Deployment and Evaluation Plan}
+
+Testbed, evaluation metrics
+
+
+\section{Broader Impacts and Educational Outreach}
+
+\section{Results from Prior NSF Support}
+
+\textbf{B. Ziebart} was a sub-contractee on NRI-\#1227495 (\$509,409,
+10/2012-9/2017),``Collaborative Research:
+Purposeful Prediction: Co-robot Interaction via Understanding Intent
+and Goals,'' PI on RI-\#1526379 (\$500,000, 09/2015-8/2018),
+``Robust Optimization of Loss Functions with Application to
+Active Learning'') and PI on III-\#1514126 (\$636,454, 09/2015-08/2018)
+``Collaborative Research: Computational tools for extracting individual,
+dyadic, and network behavior from remotely sensed data.''
+The {\bf Intellectual Merits} for these awards include: the
+creation of a framework enabling robots to anticipate and adapt to the
+activities of their human co-workers (NRI); developing techniques that
+better align learning objectives with application performance measures
+in classification settings (RI);
+and developing methods for making sense of massive amounts of social animal
+sensor data (III).
+The {\bf Broader Impacts}
+include the significant efficiency improvements in small- and
+medium-scale manufacturing that these improved interaction technologies
+will facilitate (NRI); improving the application of machine learning to a
+range of domains with non-convex loss measures
+(RI); and effectively multiplying the expertise
+of field biologists when interpreting sensor data (III).
+To date, these projects have produced
+a total of ten conference publications and six workshop publications
+covering the topics of
+inverse optimal control \cite{asif2013inferring,monfort2013predictive,
+byravan2014layered,monfort2015intent,chen2015predictive,
+byravan2015graph,monfort2015softstar,chen2015imitation,chen2016adversarial},
+learning under covariate shift/active learning
+\cite{liu2014robust,liu2015shift,behpour2015addressing,chen2016robust},
+inductively optimizing multivariate losses \cite{wang2015adversarial},
+sequence prediction \cite{li2016adversarial}, and learning to interact
+\cite{behpour2015minimax}.
+
+
+\end{document}
